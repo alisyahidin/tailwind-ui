@@ -5,7 +5,9 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
-    "docs:dev": "yarn workspace docs dev"
+    "docs:dev": "yarn workspace docs dev",
+    "docs:build": "yarn workspace docs build",
+    "docs:start": "yarn workspace docs start"
   },
   "workspaces": [
     "packages/*",

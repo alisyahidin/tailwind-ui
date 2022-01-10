@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "docs:dev": "yarn workspace docs dev"
+  },
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ]
+}

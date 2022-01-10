@@ -1,0 +1,15 @@
+{
+  "name": "@master-ui/core",
+  "version": "1.0.0",
+  "description": "EDTS Design System",
+  "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
+  "homepage": "https://sg-edts.com",
+  "license": "ISC",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2"
+  }
+}

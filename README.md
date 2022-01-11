@@ -1,0 +1,1 @@
+This is sample monorepo for tailwind ui package. Inspired by [Daisy UI](https://github.com/saadeghi/daisyui).

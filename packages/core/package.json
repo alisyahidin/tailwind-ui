@@ -13,7 +13,7 @@
     "dist/{components}.css",
     "index.js"
   ],
-  "peerDependencies": {
+  "dependencies": {
     "react": "^17.0.2"
   },
   "devDependencies": {

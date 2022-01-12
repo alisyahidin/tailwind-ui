@@ -7,7 +7,8 @@
   "scripts": {
     "docs:dev": "yarn workspace docs dev",
     "docs:build": "yarn workspace docs build",
-    "docs:start": "yarn workspace docs start"
+    "docs:start": "yarn workspace docs start",
+    "core:build": "yarn workspace @master-ui/core build"
   },
   "workspaces": [
     "packages/*",

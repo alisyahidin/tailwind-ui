@@ -1,5 +1,6 @@
 {
-  "name": "@master-ui/core",
+  "name": "@alisyahidin/core",
+  "private": false,
   "version": "1.0.0",
   "description": "EDTS Design System",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",

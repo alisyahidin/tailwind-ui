@@ -1,5 +1,6 @@
 {
-  "name": "@master-ui/icon",
+  "name": "@alisyahidin/icon",
+  "private": false,
   "version": "1.0.0",
   "description": "EDTS Icon design system",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",

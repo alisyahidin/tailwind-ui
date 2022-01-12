@@ -1,0 +1,23 @@
+.toggle {
+  --focus-shadow: 0 0 0;
+  --handleoffset: 1.5rem;
+  @apply appearance-none w-12 h-6 rounded-2xl border border-opacity-20 cursor-pointer ease-in-out duration-300 bg-gray-400;
+  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
+  box-shadow: calc(var(--handleoffset) * -1) 0 0 2px #f000b8 inset, 0 0 0 2px #f000b8 inset, var(--focus-shadow);
+  &:focus-visible {
+    --focus-shadow: 0 0 0 2px #f000b8, 0 0 0 4px #ebecf0;
+  }
+  &:checked,
+  &[checked="true"] {
+    @apply border-opacity-100 bg-opacity-100 bg-white;
+    box-shadow: var(--handleoffset) 0 0 2px #f000b8 inset, 0 0 0 2px #f000b8 inset, var(--focus-shadow);
+    [dir="rtl"] & {
+      box-shadow: calc(var(--handleoffset) * 1) 0 0 2px #f000b8 inset, 0 0 0 2px #f000b8 inset, var(--focus-shadow);
+    }
+  }
+}
+
+/* backward comptability */
+.toggle-mark {
+  @apply hidden;
+}

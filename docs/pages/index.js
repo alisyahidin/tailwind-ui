@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Button from '@master-ui/core/components/Button'
+import Toggle from '@master-ui/core/components/Toggle'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
 
       <Button>Test</Button>
+      <Toggle />
     </div>
   )
 }

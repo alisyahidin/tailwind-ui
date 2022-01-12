@@ -1,0 +1,13 @@
+{
+  "include": [
+    "./src/react-components"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./components",
+    "declarationMap": true,
+    "jsx": "react-jsx",
+    "allowJs": true
+  }
+}

@@ -10,7 +10,7 @@
     "docs:start": "yarn workspace docs start",
     "core:build": "yarn workspace @alisyahidin/core build",
     "bump-version": "lerna version --no-git-tag-version --no-private",
-    "release": "lerna publish from-package --dist-tag latest"
+    "release": "yarn core:build && lerna publish from-package --dist-tag latest"
   },
   "workspaces": [
     "packages/*",

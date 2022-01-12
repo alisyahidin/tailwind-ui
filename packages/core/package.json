@@ -31,5 +31,8 @@
     "components:merge": "cat ./dist/components/*.css > ./dist/components.css",
     "prejss": "prejss-cli ./dist/components.css --format commonjs",
     "build": "npm run components && npm run components:merge && npm run prejss"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

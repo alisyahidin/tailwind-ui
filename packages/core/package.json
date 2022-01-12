@@ -17,6 +17,10 @@
     "react": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",
     "postcss": "^8.4.5",
@@ -30,7 +34,8 @@
     "components": "postcss --config src/components src/components/**/*.css --base src --dir dist",
     "components:merge": "cat ./dist/components/*.css > ./dist/components.css",
     "prejss": "prejss-cli ./dist/components.css --format commonjs",
-    "build": "npm run components && npm run components:merge && npm run prejss"
+    "babel": "babel ./src/react-components --out-dir ./components",
+    "build": "npm run components && npm run components:merge && npm run prejss && npm run babel"
   },
   "publishConfig": {
     "access": "public"

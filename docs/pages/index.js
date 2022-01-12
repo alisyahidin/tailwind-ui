@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Button from '@master-ui/core/components/Button'
-import Toggle from '@master-ui/core/components/Toggle'
+import Button from '@alisyahidin/core/components/Button'
+import Toggle from '@alisyahidin/core/components/Toggle'
 
 export default function Home() {
   return (

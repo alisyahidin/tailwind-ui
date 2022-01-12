@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "devDependencies": {
     "lerna": "^4.0.0"
   },
@@ -8,7 +8,7 @@
     "docs:dev": "yarn workspace docs dev",
     "docs:build": "yarn workspace docs build",
     "docs:start": "yarn workspace docs start",
-    "core:build": "yarn workspace @master-ui/core build"
+    "core:build": "yarn workspace @alisyahidin/core build"
   },
   "workspaces": [
     "packages/*",

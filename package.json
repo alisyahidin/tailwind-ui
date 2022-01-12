@@ -8,7 +8,9 @@
     "docs:dev": "yarn workspace docs dev",
     "docs:build": "yarn workspace docs build",
     "docs:start": "yarn workspace docs start",
-    "core:build": "yarn workspace @alisyahidin/core build"
+    "core:build": "yarn workspace @alisyahidin/core build",
+    "version": "lerna version --no-git-tag-version --no-private",
+    "release": "lerna publish from-package --dist-tag latest"
   },
   "workspaces": [
     "packages/*",

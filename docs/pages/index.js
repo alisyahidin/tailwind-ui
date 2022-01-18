@@ -12,6 +12,7 @@ export default function Home() {
       </Head>
 
       <Button>Test</Button>
+      <Button variant="secondary">Holla</Button>
       <Toggle />
     </div>
   )

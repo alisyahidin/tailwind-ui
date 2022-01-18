@@ -5,9 +5,11 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
+    "docs": "yarn workspace docs",
     "docs:dev": "yarn workspace docs dev",
     "docs:build": "yarn workspace docs build",
     "docs:start": "yarn workspace docs start",
+    "core": "yarn workspace @alisyahidin/core",
     "core:build": "yarn workspace @alisyahidin/core build",
     "bump-version": "lerna version --no-git-tag-version --no-private",
     "release": "yarn core:build && lerna publish from-package --dist-tag latest"

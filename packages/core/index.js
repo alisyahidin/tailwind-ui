@@ -1,4 +1,4 @@
-const components = require('./dist/components')
+const components = require('./styles')
 
 const mainFunction = ({ addComponents, config }) => {
   addComponents(components)

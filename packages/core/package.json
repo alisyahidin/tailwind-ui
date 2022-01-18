@@ -10,8 +10,8 @@
   "types": "./components/index.d.ts",
   "files": [
     "components",
-    "dist/*.js",
-    "dist/{components}.css",
+    "styles/*.js",
+    "styles/{index}.css",
     "index.js"
   ],
   "dependencies": {

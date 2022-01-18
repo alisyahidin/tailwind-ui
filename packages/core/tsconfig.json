@@ -8,6 +8,7 @@
     "outDir": "./components",
     "declarationMap": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "allowJs": true
   }
 }

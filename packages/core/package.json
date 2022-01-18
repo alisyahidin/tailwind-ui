@@ -15,6 +15,7 @@
     "index.js"
   ],
   "dependencies": {
+    "@emotion/react": "^11.7.1",
     "react": "^17.0.2"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-react": "^7.16.7",
+    "@emotion/babel-plugin": "^11.7.2",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",
     "postcss": "^8.4.5",
@@ -36,10 +38,11 @@
     "components": "postcss --config src/components src/components/**/*.css --base src --dir styles",
     "components:merge": "cat ./styles/components/*.css > ./styles/index.css",
     "prejss": "prejss-cli ./styles/index.css --format commonjs",
+    "prejss:components": "prejss-cli ./styles/components --format commonjs",
     "babel": "babel ./src/react-components --out-dir ./components",
     "tsc-compile": "tsc",
     "clear-build": "rm -Rf ./components ./styles",
-    "build": "npm run clear-build && npm run components && npm run components:merge && npm run prejss && npm run babel && npm run tsc-compile"
+    "build": "npm run clear-build && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run babel"
   },
   "publishConfig": {
     "access": "public"

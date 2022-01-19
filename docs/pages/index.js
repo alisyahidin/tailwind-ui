@@ -11,9 +11,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Button>Test</Button>
-      <Button variant="secondary">Holla</Button>
+      <Button>Primary</Button>
+      <Button variant="secondary">Secondary</Button>
       <Toggle />
+      <input className="toggle" type="checkbox" />
     </div>
   )
 }

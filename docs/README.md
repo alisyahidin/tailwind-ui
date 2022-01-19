@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EDTS UI
 
-## Getting Started
+A brief description of what this project does and who it's for.
 
-First, run the development server:
+
+
+## Installation
+
+Install @edts/ui with npm:
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm install @edts/ui tailwindcss postcss autoprefixer -D
+```
+or yarn:
+
+```bash
+yarn add @edts/ui tailwindcss postcss autoprefixer --dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Initialize tailwindcss config with running:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npx tailwindcss init -p
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Import @edts/ui as tailwindcss plugin in `tailwind.config.js` file:
+```javascript
+module.exports = {
+  //...
+  plugins: [
+    require('@edts/ui')
+  ]
+}
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+For more information about tailwindcss installation, please click [here](https://tailwindcss.com/docs/installation).
+## Run Locally
 
-## Learn More
+Clone the project
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git clone https://bitbucket.org/edts/master-ui-tailwind.git
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Go to the project directory
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+cd master-ui-tailwind
+```
 
-## Deploy on Vercel
+Install dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+yarn install
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Run lerna bootstrap
+
+```bash
+lerna bootstrap
+```
+
+Start development server
+
+```bash
+yarn docs:dev
+```
+## Usage/Examples
+
+```javascript
+import Component from 'my-project'
+
+function App() {
+  return <Component />
+}
+```
+

@@ -13,6 +13,7 @@ export default function Home() {
 
       <Button>Primary</Button>
       <Button variant="secondary">Secondary</Button>
+      <Button data-theme="newtheme" variant="secondary">Secondary</Button>
       <Toggle />
       <input className="toggle" type="checkbox" />
     </div>

@@ -42,8 +42,9 @@
     "prejss:components": "prejss-cli ./styles/components --format commonjs",
     "babel": "babel ./src/react --out-dir ./components",
     "tsc-compile": "tsc",
-    "clear-build": "rm -Rf ./components ./styles ./colors",
-    "build": "npm run clear-build && npm run colors && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes && npm run babel"
+    "clear:build": "rm -Rf ./components ./styles ./colors",
+    "clear:css": "rm -f ./styles/components/*.css ./styles/index.css",
+    "build": "npm run clear:build && npm run colors && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes && npm run babel && npm run clear:css"
   },
   "publishConfig": {
     "access": "public"

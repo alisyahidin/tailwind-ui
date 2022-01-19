@@ -1,7 +1,52 @@
 const components = require('./styles')
+const colors = require('./colors/index')
+const themes = require('./colors/themes')
+const colorNames = require('./colors/colorNames')
+const hex2hsl = require('./colors/hex2hsl')
 
-const mainFunction = ({ addComponents, config }) => {
+const mainFunction = ({ addComponents, addBase, config }) => {
   addComponents(components)
+
+  const registeredThemes = new Object()
+  function convertThemeColorsToHsl(themeData) {
+    if (typeof themeData === 'object' && themeData !== null) {
+      let convertedData = {}
+      Object.entries(themeData).forEach(([rule, value]) => {
+        if (colorNames.hasOwnProperty(rule)) {
+          convertedData[colorNames[rule]] = hex2hsl(value)
+        } else {
+          convertedData[rule] = value
+        }
+      })
+      return convertedData
+    }
+    return themeData
+  }
+
+  // register default themes
+  Object.entries(themes).forEach(([theme, _]) => {
+    registeredThemes[theme] = convertThemeColorsToHsl(themes[theme])
+  });
+
+  // register custom themes
+  if (Array.isArray(config('@alisyahidin/core.themes'))) {
+    config('@alisyahidin/core.themes').forEach((item, index) => {
+      if (typeof item === 'object' && item !== null) {
+        Object.entries(item).forEach(([customThemeName, customthemeData]) => {
+          registeredThemes[customThemeName] = convertThemeColorsToHsl(customthemeData)
+        })
+      }
+    })
+  }
+
+  // register all themes
+  Object.entries(registeredThemes).forEach(([theme, value]) => {
+    if (theme === 'default') {
+      addBase({ ':root': registeredThemes['default'] })
+    } else {
+      addBase({ [`[data-theme=${theme}]`]: registeredThemes[theme] })
+    }
+  })
 }
 
 let isTailwindInstalled = false;
@@ -13,7 +58,7 @@ try {
 }
 if (isTailwindInstalled !== false) {
   module.exports = require("tailwindcss/plugin")(
-    mainFunction
+    mainFunction, { theme: { extend: { colors } } }
   );
 } else {
   module.exports = mainFunction;

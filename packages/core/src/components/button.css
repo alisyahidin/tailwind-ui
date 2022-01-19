@@ -1,5 +1,5 @@
 .btn {
-  background: linear-gradient(45deg, #2196f3 30%, #21cbf3 90%);
+  @apply bg-primary;
   @apply text-white;
   @apply border-0;
   @apply rounded;
@@ -11,6 +11,6 @@
 }
 
 .btn-secondary {
-  background: linear-gradient(45deg, #e221f3 30%, #fc97fc 90%);
+  @apply bg-secondary;
   @apply shadow-pink-700;
 }

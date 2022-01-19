@@ -9,10 +9,10 @@ const Button = ({ children, className = '', variant = 'primary', ...props }) => 
   <ClassNames>
     {({ cx, css }) => <button
       className={cx(
+        className,
         css`${style['.btn']}`,
         getVariant(variant) ? css`${style[getVariant(variant)]}` : null,
-        className)
-      }
+      )}
       {...props}
     >
       {children}

@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-react": "^7.16.7",
     "@emotion/babel-plugin": "^11.7.2",
+    "@types/react": "^17.0.38",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",
     "postcss": "^8.4.5",
@@ -46,7 +47,7 @@
     "tsc-compile": "tsc",
     "clear:build": "rm -Rf ./components ./styles ./colors",
     "watch:build": "watch 'npm run build' src",
-    "build": "npm run clear:build && npm run colors && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes && npm run babel"
+    "build": "npm run clear:build && npm run colors && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes && npm run babel && npm run tsc-compile"
   },
   "publishConfig": {
     "access": "public"

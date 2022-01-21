@@ -1,0 +1,15 @@
+.modal {
+  @apply flex items-center justify-center overscroll-contain overflow-y-hidden bg-gray-700 bg-opacity-50 z-30 fixed top-0 left-0 h-full w-full;
+}
+
+.modal-close {
+  @apply invisible pointer-events-none opacity-0;
+}
+
+.modal-open {
+  @apply visible pointer-events-auto opacity-100;
+}
+
+.modal-box {
+  @apply w-96 p-4 bg-white rounded-lg;
+}

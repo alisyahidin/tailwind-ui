@@ -3,7 +3,6 @@
     "src/react"
   ],
   "compilerOptions": {
-    "rootDir": ".",
     "outDir": "./components",
     "declaration": true,
     "emitDeclarationOnly": true,

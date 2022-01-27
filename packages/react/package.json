@@ -1,12 +1,12 @@
 {
   "name": "@alisyahidin/react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "> TODO: description",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "license": "ISC",
   "main": "./dist/index.js",
   "exports": {
-    "./": "./dist"
+    "./": "./dist/"
   },
   "publishConfig": {
     "access": "public"

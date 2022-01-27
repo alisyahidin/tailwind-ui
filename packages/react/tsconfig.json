@@ -1,0 +1,22 @@
+{
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "./**/*.js",
+  ],
+  "compilerOptions": {
+    "outDir": "./",
+    "rootDir": "./src",
+    "target": "es2016",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    // "moduleResolution": "node",
+    "allowJs": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+  }
+}

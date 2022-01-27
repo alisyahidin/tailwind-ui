@@ -11,6 +11,8 @@
     "docs:start": "yarn workspace docs start",
     "core": "yarn workspace @alisyahidin/core",
     "core:build": "yarn workspace @alisyahidin/core build",
+    "react": "yarn workspace @alisyahidin/react",
+    "react:build": "yarn workspace @alisyahidin/react build",
     "bump-version": "lerna version --no-git-tag-version --no-private",
     "release": "yarn core:build && lerna publish from-package --dist-tag latest"
   },

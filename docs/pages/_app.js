@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-// import '@alisyahidin/core/styles/themes.css'
+// import '@alisyahidin/react/themes.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

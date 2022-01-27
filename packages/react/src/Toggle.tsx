@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react'
 import { ClassNames } from '@emotion/react'
 // @ts-ignore
-import style from '@alisyahidin/core/styles/components/modal'
+import style from '@alisyahidin/core/styles/components/toggle'
 
 type Props = HTMLAttributes<HTMLInputElement>
 

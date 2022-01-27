@@ -1,6 +1,6 @@
 {
   "name": "@alisyahidin/react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "> TODO: description",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "license": "ISC",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "clear:build": "rm -Rf ./dist",
-    "build": "npm run clear:build && node ./scripts/copy-theme && tsc"
+    "build": "npm run clear:build && tsc && node ./scripts/copy-theme"
   },
   "dependencies": {
     "@alisyahidin/core": "^1.2.0",

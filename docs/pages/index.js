@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import Head from 'next/head'
 import Button from '@alisyahidin/react/Button'
-// import Toggle from '@alisyahidin/react/Toggle'
+import Toggle from '@alisyahidin/react/Toggle'
 // import Modal from '@alisyahidin/react/Modal'
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <Button className="bg-pink-500">Override</Button>
       <Button variant="secondary">Secondary</Button>
       <Button data-theme="newtheme" variant="secondary">Secondary</Button>
-      {/* <Toggle /> */}
+      <Toggle />
       <button className="btn bg-orange-400">Overide CSS</button>
       <button className="btn bg-opacity-30">Opacity CSS</button>
       <input className="toggle" type="checkbox" />

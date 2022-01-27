@@ -1,15 +1,19 @@
 {
   "name": "@alisyahidin/react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "license": "ISC",
-  "main": "./index.js",
+  "main": "./dist/index.js",
+  "exports": {
+    "./": "./dist"
+  },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "node ./scripts/copy-theme && tsc"
+    "clear:build": "rm -Rf ./dist",
+    "build": "npm run clear:build && node ./scripts/copy-theme && tsc"
   },
   "dependencies": {
     "@alisyahidin/core": "^1.2.0",

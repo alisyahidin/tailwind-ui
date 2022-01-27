@@ -1,7 +1,7 @@
 {
   "name": "@alisyahidin/core",
   "private": false,
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "EDTS Design System",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "homepage": "https://sg-edts.com",
@@ -9,23 +9,12 @@
   "main": "./index.js",
   "types": "./components/index.d.ts",
   "files": [
-    "components",
     "styles/**/*.js",
     "styles/themes.css",
     "index.js",
     "colors"
   ],
-  "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "react": "^17.0.2"
-  },
   "devDependencies": {
-    "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.8",
-    "@babel/preset-react": "^7.16.7",
-    "@emotion/babel-plugin": "^11.7.2",
-    "@types/react": "^17.0.38",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",
     "postcss": "^8.4.5",
@@ -33,7 +22,6 @@
     "postcss-import": "^14.0.2",
     "prejss-cli": "^0.3.3",
     "tailwindcss": "^3.0.13",
-    "typescript": "^4.5.4",
     "watch": "^1.0.2"
   },
   "scripts": {
@@ -43,11 +31,9 @@
     "themes": "postcss ./src/themes/index.css -o ./styles/themes.css --config ./src/themes",
     "prejss": "prejss-cli ./styles/index.css --format commonjs",
     "prejss:components": "prejss-cli ./styles/components --format commonjs",
-    "babel": "babel ./src/react --out-dir ./components",
-    "tsc-compile": "tsc",
-    "clear:build": "rm -Rf ./components ./styles ./colors",
+    "clear:build": "rm -Rf ./styles ./colors",
     "watch:build": "watch 'npm run build' src",
-    "build": "npm run clear:build && npm run colors && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes && npm run babel && npm run tsc-compile"
+    "build": "npm run clear:build && npm run colors && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes"
   },
   "publishConfig": {
     "access": "public"

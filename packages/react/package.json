@@ -4,15 +4,12 @@
   "description": "> TODO: description",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "license": "ISC",
-  "main": "./dist/index.js",
-  "exports": {
-    "./": "./dist/"
-  },
+  "main": "./index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "clear:build": "rm -Rf ./dist",
+    "clear:build": "find . -name \"*.js\" -not -name \"copy-theme.js\" -delete && find . -name \"*.d.ts\" -type f -delete && rm -f themes.css",
     "build": "npm run clear:build && tsc && node ./scripts/copy-theme"
   },
   "dependencies": {

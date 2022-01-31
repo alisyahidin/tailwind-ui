@@ -1,2 +1,4 @@
 /*.css
-/dist
+/**/*.js
+/**/*.d.ts
+!./scripts/copy-theme.js

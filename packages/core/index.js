@@ -1,8 +1,8 @@
-const components = require('./styles')
-const colors = require('./colors/index')
-const themes = require('./colors/themes')
-const colorNames = require('./colors/colorNames')
-const hex2hsl = require('./colors/hex2hsl')
+const components = require('./dist/styles')
+const colors = require('./dist/colors/index')
+const themes = require('./dist/colors/themes')
+const colorNames = require('./dist/colors/colorNames')
+const hex2hsl = require('./dist/colors/hex2hsl')
 
 const mainFunction = ({ addComponents, addBase, config }) => {
   addComponents(components)

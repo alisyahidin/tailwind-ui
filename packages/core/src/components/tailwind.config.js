@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      ...require('../../colors')
+      ...require('../colors')
     }
   },
   // plugins: [

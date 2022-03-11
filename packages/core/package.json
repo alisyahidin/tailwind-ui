@@ -1,19 +1,12 @@
 {
-  "name": "@alisyahidin/core",
-  "private": false,
-  "version": "1.2.0",
+  "name": "core",
+  "private": true,
+  "version": "1.2.1",
   "description": "EDTS Design System",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "homepage": "https://sg-edts.com",
   "license": "ISC",
   "main": "./index.js",
-  "types": "./components/index.d.ts",
-  "files": [
-    "styles/**/*.js",
-    "styles/themes.css",
-    "index.js",
-    "colors"
-  ],
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",
@@ -25,15 +18,15 @@
     "watch": "^1.0.2"
   },
   "scripts": {
-    "colors": "cp -R ./src/colors ./colors",
-    "components": "postcss --config src/components src/components/**/*.css --base src --dir styles",
-    "components:merge": "cat ./styles/components/*.css > ./styles/index.css",
-    "themes": "postcss ./src/themes/index.css -o ./styles/themes.css --config ./src/themes",
-    "prejss": "prejss-cli ./styles/index.css --format commonjs",
-    "prejss:components": "prejss-cli ./styles/components --format commonjs",
-    "clear:build": "rm -Rf ./styles ./colors",
+    "copy": "node scripts/copy-file.js",
+    "components": "postcss --config src/components src/components/**/*.css --base src --dir ./dist/styles",
+    "components:merge": "cat ./dist/styles/components/*.css > ./dist/styles/index.css",
+    "themes": "postcss ./src/themes/index.css -o ./dist/styles/themes.css --config ./src/themes",
+    "prejss": "prejss-cli ./dist/styles/index.css --format commonjs",
+    "prejss:components": "prejss-cli ./dist/styles/components --format commonjs",
+    "clear:build": "rm -Rf ./dist",
     "watch:build": "watch 'npm run build' src",
-    "build": "npm run clear:build && npm run colors && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes"
+    "build": "npm run clear:build && npm run copy && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes"
   },
   "publishConfig": {
     "access": "public"

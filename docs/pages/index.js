@@ -19,7 +19,7 @@ export default function Home() {
       <Button variant="secondary">Secondary</Button>
       <Button data-theme="newtheme" variant="secondary">Secondary</Button>
       <Toggle />
-      <button className="btn bg-orange-400">Overide CSS</button>
+      <button className="btn">Overide CSS</button>
       <button className="btn bg-opacity-30">Opacity CSS</button>
       <input className="toggle" type="checkbox" />
       {/* <Button onClick={() => modalRef.current.open()}>Open Modal</Button> */}

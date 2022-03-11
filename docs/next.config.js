@@ -7,6 +7,28 @@ module.exports = {
     config.module.rules = [
       ...config.module.rules,
       {
+        test: /\.(js|jsx)$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            sourceType: 'unambiguous',
+            plugins: [
+              [
+                'babel-plugin-module-resolver',
+                {
+                  alias: {
+                    // all packages in this monorepo
+                    '@alisyahidin/core': '../packages/core/dist',
+                    '@alisyahidin/react': '../packages/react',
+                  },
+                  transformFunctions: ['require'],
+                },
+              ],
+            ],
+          },
+        },
+      },
+      {
         test: /\.(tsx|ts|js|jsx)$/,
         include: [resolvedBaseUrl],
         use: defaultLoaders.babel,

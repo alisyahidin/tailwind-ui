@@ -1,5 +1,5 @@
 {
-  "name": "core",
+  "name": "@alisyahidin/core",
   "private": true,
   "version": "1.2.1",
   "description": "EDTS Design System",
@@ -7,6 +7,12 @@
   "homepage": "https://sg-edts.com",
   "license": "ISC",
   "main": "./index.js",
+  "files": [
+    "styles/**/*.js",
+    "styles/themes.css",
+    "index.js",
+    "colors"
+  ],
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",

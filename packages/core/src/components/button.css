@@ -1,6 +1,5 @@
 .btn {
-  @apply text-red-500 border-0 rounded shadow shadow-blue-600 px-8 py-2 m-1;
-  background-color: red;
+  @apply bg-primary text-white border-0 rounded shadow shadow-blue-600 px-8 py-2 m-1;
 }
 
 .btn-secondary {

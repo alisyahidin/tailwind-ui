@@ -1,4 +1,1 @@
-/*.css
-/**/*.js
-/**/*.d.ts
-!./scripts/copy-theme.js
+/dist/

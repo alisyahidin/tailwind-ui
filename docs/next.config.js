@@ -19,7 +19,7 @@ module.exports = {
                   alias: {
                     // all packages in this monorepo
                     '@alisyahidin/core': '../packages/core/dist',
-                    '@alisyahidin/react': '../packages/react',
+                    '@alisyahidin/react': '../packages/react/dist',
                   },
                   transformFunctions: ['require'],
                 },

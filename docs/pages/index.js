@@ -15,6 +15,7 @@ export default function Home() {
       </Head>
 
       <Button>Primary</Button>
+      <button className='btn bg-primary-50'>Primary 50</button>
       <Button className="bg-pink-500">Override</Button>
       <Button variant="secondary">Secondary</Button>
       <Button data-theme="newtheme" variant="secondary">Secondary</Button>

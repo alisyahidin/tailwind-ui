@@ -10,16 +10,16 @@
     "docs:dev": "yarn workspace docs dev",
     "docs:build": "yarn workspace docs build",
     "docs:start": "yarn workspace docs start",
-    "core": "yarn workspace core",
-    "core:build": "yarn workspace core build",
-    "react": "yarn workspace react",
-    "react:build": "yarn workspace react build",
+    "core": "yarn workspace @alisyahidin/core",
+    "core:build": "yarn workspace @alisyahidin/core build",
+    "react": "yarn workspace @alisyahidin/react",
+    "react:build": "yarn workspace @alisyahidin/react build",
     "bump-version": "lerna version --no-git-tag-version --no-private",
     "release": "yarn core:build && yarn react:build && lerna publish from-package --dist-tag latest",
     "postinstall": "yarn core:build && yarn react:build"
   },
   "workspaces": [
-    "packages/**/*",
+    "packages/*",
     "docs"
   ]
 }

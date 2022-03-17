@@ -18,6 +18,7 @@ export default function Home() {
       <ICCancel />
       <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>
+      <Button variant="alt">Alternative</Button>
       <Button variant="primary" size="sm">small</Button>
       <Button variant="primary" size="md">Medium</Button>
       <Button variant="primary" size="lg">Large</Button>

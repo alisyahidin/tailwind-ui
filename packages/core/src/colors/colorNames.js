@@ -11,7 +11,7 @@ module.exports = {
   "secondary-10": "--edts-secondary-10",
   "secondary2-50": '--edts-secondary2-50',
   "secondary2-40": '--edts-secondary2-40',
-  secondary2: '--edts-secondary',
+  secondary2: '--edts-secondary2',
   "secondary2-20": '--edts-secondary2-20',
   "secondary2-10": "--edts-secondary2-10",
   "neutral-70": '--edts-neutral-70',

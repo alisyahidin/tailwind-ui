@@ -3,7 +3,7 @@ import { ClassNames } from '@emotion/react'
 // @ts-ignore
 import style from '@alisyahidin/core/components/button'
 
-type Variant = 'secondary' | 'primary'
+type Variant = 'secondary' | 'primary' | 'alt'
 type Size = 'sm' | 'md' | 'lg'
 
 type Props = {
@@ -14,6 +14,7 @@ type Props = {
 const getVariant = (value: Variant) => ({
   primary: '.btn-primary',
   secondary: '.btn-secondary',
+  alt: '.btn-alt',
 })[value as Variant] ?? null
 
 const getSize = (value: Size) => ({

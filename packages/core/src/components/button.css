@@ -1,8 +1,24 @@
 .btn {
-  @apply bg-primary text-white border-0 rounded px-4 py-2 text-h2;
+  @apply border-0 rounded px-4 py-2 text-h2;
   &:disabled {
     @apply bg-neutral-30;
   }
+}
+
+.btn-sm {
+  @apply text-h3;
+}
+
+.btn-md {
+  @apply text-h2;
+}
+
+.btn-lg {
+  @apply text-h1 px-6 py-3;
+}
+
+.btn-primary {
+  @apply bg-primary text-white;
   &:hover {
     @apply bg-primary-10;
   }
@@ -11,16 +27,9 @@
   }
 }
 
-.btn-sm {
-  @apply text-h3
-}
-
-.btn-md {
-  @apply text-h2
-}
-
-.btn-lg {
-  @apply text-h1 px-6 py-3 ;
+.btn-alt {
+  @apply bg-secondary text-white;
+  border-width: 1px;
 }
 
 .btn-secondary {

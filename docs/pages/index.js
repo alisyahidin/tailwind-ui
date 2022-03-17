@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Button from '@alisyahidin/react/Button'
 import Toggle from '@alisyahidin/react/Toggle'
 // import Modal from '@alisyahidin/react/Modal'
+import { ICCancel } from '@alisyahidin/icon'
 
 export default function Home() {
   const modalRef = useRef(null)
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <ICCancel />
       <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="primary" size="sm">small</Button>

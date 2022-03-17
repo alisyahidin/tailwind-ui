@@ -1,0 +1,1 @@
+export { default as ICCancel } from './ic_cancel'

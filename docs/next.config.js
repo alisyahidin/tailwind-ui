@@ -20,6 +20,7 @@ module.exports = {
                     // all packages in this monorepo
                     '@alisyahidin/core': '../packages/core/dist',
                     '@alisyahidin/react': '../packages/react/dist',
+                    '@alisyahidin/icon': '../packages/icon/dist',
                   },
                   transformFunctions: ['require'],
                 },

@@ -14,9 +14,11 @@
     "core:build": "yarn workspace @alisyahidin/core build",
     "react": "yarn workspace @alisyahidin/react",
     "react:build": "yarn workspace @alisyahidin/react build",
+    "icon": "yarn workspace @alisyahidin/icon",
+    "icon:build": "yarn workspace @alisyahidin/icon build",
     "bump-version": "lerna version --no-git-tag-version --no-private",
     "release": "yarn core:build && yarn react:build && lerna publish from-package --dist-tag latest",
-    "postinstall": "yarn core:build && yarn react:build"
+    "postinstall": "yarn core:build && yarn react:build && yarn icon:build"
   },
   "workspaces": [
     "packages/*",

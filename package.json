@@ -2,7 +2,8 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "yarn": "^1.22.17"
   },
   "scripts": {
     "docs": "yarn workspace docs",

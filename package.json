@@ -15,7 +15,7 @@
     "react": "yarn workspace react",
     "react:build": "yarn workspace react build",
     "bump-version": "lerna version --no-git-tag-version --no-private",
-    "release": "yarn core:build && yarn react:build && lerna publish from-package --dist-tag latest --contents dist",
+    "release": "yarn core:build && yarn react:build && lerna publish from-package --dist-tag latest",
     "postinstall": "yarn core:build && yarn react:build"
   },
   "workspaces": [

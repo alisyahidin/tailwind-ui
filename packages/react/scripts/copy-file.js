@@ -1,4 +1,5 @@
 const fs = require('fs')
+const fse = require('fse')
 
 const packagePath = process.cwd()
 const targetBuild = './dist'

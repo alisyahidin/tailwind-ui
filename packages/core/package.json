@@ -1,7 +1,7 @@
 {
   "name": "@alisyahidin/core",
   "private": true,
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "EDTS Design System",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "homepage": "https://sg-edts.com",
@@ -13,6 +13,10 @@
     "index.js",
     "colors"
   ],
+  "dependencies": {
+    "css-selector-tokenizer": "^0.8.0",
+    "postcss-js": "^4.0.0"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.15",

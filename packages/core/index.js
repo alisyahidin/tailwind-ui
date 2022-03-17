@@ -6,8 +6,35 @@ const colorNames = require('./dist/colors/colorNames')
 const hex2hsl = require('./dist/colors/hex2hsl')
 
 const mainFunction = ({ addComponents, addBase, addUtilities, config }) => {
-  addComponents(components)
-  addUtilities(utilities)
+  // add prefix to class names if specified
+  const prefix = config("@alisyahidin/core.prefix")
+  let postcssJs, postcssPrefix
+  if (prefix) {
+    try {
+      postcssJs = require("postcss-js")
+      postcssPrefix = require('./src/lib/postcss-prefixer')
+    } catch (error) {
+      console.error(`Error occurred and prevent applying the "prefix" option:`, error)
+    }
+  }
+  const shouldApplyPrefix = Boolean(prefix && postcssPrefix && postcssJs)
+  let listComponents = components
+  if (shouldApplyPrefix) {
+    listComponents = postcssJs.sync(postcssPrefix({
+      prefix: prefix,
+      ignore: []
+    }))(listComponents)
+  }
+  addComponents(listComponents)
+
+  let listUtilities = utilities
+  if (shouldApplyPrefix) {
+    listUtilities = postcssJs.sync(postcssPrefix({
+      prefix: prefix,
+      ignore: []
+    }))(listUtilities)
+  }
+  addUtilities(listUtilities)
 
   const registeredThemes = new Object()
   function convertThemeColorsToHsl(themeData) {

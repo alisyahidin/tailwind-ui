@@ -3,5 +3,5 @@
 }
 
 .btn-secondary {
-  @apply bg-secondary shadow-pink-700;
+  @apply bg-secondary shadow-pink-700 text-d1;
 }

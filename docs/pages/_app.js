@@ -3,6 +3,7 @@ import '../styles/globals.css'
 
 // for realtime development
 import '@alisyahidin/core/components/index.css'
+import '@alisyahidin/core/utilities/index.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

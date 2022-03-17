@@ -1,11 +1,13 @@
 const components = require('./dist/components')
+const utilities = require('./dist/utilities')
 const colors = require('./dist/colors/index')
 const themes = require('./dist/colors/themes')
 const colorNames = require('./dist/colors/colorNames')
 const hex2hsl = require('./dist/colors/hex2hsl')
 
-const mainFunction = ({ addComponents, addBase, config }) => {
+const mainFunction = ({ addComponents, addBase, addUtilities, config }) => {
   addComponents(components)
+  addUtilities(utilities)
 
   const registeredThemes = new Object()
   function convertThemeColorsToHsl(themeData) {

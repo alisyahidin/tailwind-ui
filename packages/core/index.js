@@ -1,4 +1,4 @@
-const components = require('./dist/styles')
+const components = require('./dist/components')
 const colors = require('./dist/colors/index')
 const themes = require('./dist/colors/themes')
 const colorNames = require('./dist/colors/colorNames')

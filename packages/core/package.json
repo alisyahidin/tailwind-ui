@@ -25,14 +25,16 @@
   },
   "scripts": {
     "copy": "node scripts/copy-file.js",
-    "components": "postcss --config src/components src/components/**/*.css --base src --dir ./dist/styles",
-    "components:merge": "cat ./dist/styles/components/*.css > ./dist/styles/index.css",
-    "themes": "postcss ./src/themes/index.css -o ./dist/styles/themes.css --config ./src/themes",
-    "prejss": "prejss-cli ./dist/styles/index.css --format commonjs",
-    "prejss:components": "prejss-cli ./dist/styles/components --format commonjs",
+    "precomponents": "postcss --config src/components src/components/**/*.css --base src --dir ./dist",
+    "components": "cat ./dist/components/*.css > ./dist/components/index.css",
+    "postcomponents": "prejss-cli ./dist/components/ --format commonjs",
+    "preutilities": "postcss --config src/utilities src/utilities/**/*.css --base src --dir ./dist",
+    "utilities": "cat ./dist/utilities/*.css > ./dist/utilities/index.css",
+    "postutilities": "prejss-cli dist/utilities/index.css --format commonjs",
+    "themes": "postcss ./src/themes/index.css -o ./dist/themes.css --config ./src/themes",
     "clear:build": "rm -Rf ./dist",
     "watch:build": "watch 'npm run build' src",
-    "build": "npm run clear:build && npm run copy && npm run components && npm run components:merge && npm run prejss && npm run prejss:components && npm run themes"
+    "build": "npm run clear:build && npm run copy && npm run utilities && npm run components && npm run themes"
   },
   "publishConfig": {
     "access": "public"

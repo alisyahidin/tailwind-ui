@@ -3,7 +3,7 @@ const fs = require('fs')
 const targetBuild = './dist'
 
 const files = [
-  { source: require.resolve('@alisyahidin/core/styles/themes.css'), target: `${targetBuild}/themes.css` },
+  { source: require.resolve('@alisyahidin/core/dist/themes.css'), target: `${targetBuild}/themes.css` },
   { source: './package.json', target: `${targetBuild}/package.json` }
 ]
 

@@ -2,7 +2,7 @@ import { useState, useImperativeHandle, forwardRef, HTMLAttributes, FC } from 'r
 import { ClassNames } from '@emotion/react'
 import ModalBox from './Box'
 // @ts-ignore
-import style from '@alisyahidin/core/styles/components/modal'
+import style from '@alisyahidin/core/components/modal'
 
 type Props = {
   isOpen: boolean

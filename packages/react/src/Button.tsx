@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react'
 import { ClassNames } from '@emotion/react'
 // @ts-ignore
-import style from '@alisyahidin/core/styles/components/button'
+import style from '@alisyahidin/core/components/button'
 
 type Variant = 'secondary' | 'primary'
 

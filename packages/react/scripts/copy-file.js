@@ -1,8 +1,10 @@
+const path = require('path')
 const fs = require('fs')
 const fse = require('fs-extra')
 
 const packagePath = process.cwd()
 const targetBuild = './dist'
+const buildPath = path.join(packagePath, './dist')
 
 const files = [
   { source: require.resolve('@alisyahidin/core/dist/themes.css'), target: `${targetBuild}/themes.css` },

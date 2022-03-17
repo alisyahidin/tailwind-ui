@@ -1,0 +1,19 @@
+.alert {
+    @apply text-b2 py-3 px-4 rounded border border-solid flex items-center;
+}
+
+.alert-icon {
+    @apply ml-8
+}
+
+.alert-success {
+    @apply bg-alert-success text-support-success border-support-success;
+}
+
+.alert-warning {
+    @apply bg-alert-warning text-support-warning border-support-warning;
+}
+
+.alert-error {
+    @apply bg-alert-error text-support-error border-support-error;
+}

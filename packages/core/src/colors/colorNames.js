@@ -22,10 +22,9 @@ module.exports = {
   "neutral-20": '--edts-neutral-20',
   "neutral-10": '--edts-neutral-10',
   white: '--edts-w',
-  info: "--edts-info",
-  success: "--edts-success",
-  warning: "--edts-warning",
-  error: "--edts-error",
+  "alert-success": "--edts-alert-success",
+  "alert-warning": "--edts-alert-warning",
+  "alert-error": "--edts-alert-error",
   "support-success": "--edts-support-success",
   "support-warning": "--edts-support-warning",
   "support-error": "--edts-support-error"

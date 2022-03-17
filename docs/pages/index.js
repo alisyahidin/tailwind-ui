@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import Head from 'next/head'
 import Button from '@alisyahidin/react/Button'
 import Toggle from '@alisyahidin/react/Toggle'
+import Alert from '@alisyahidin/react/Alert'
 // import Modal from '@alisyahidin/react/Modal'
 import { ICCancel } from '@alisyahidin/icon'
 
@@ -39,6 +40,9 @@ export default function Home() {
       <p className="text-b2">Test b2</p>
       <p className="text-b3">Test b3</p>
       <p className="text-b4">Test b4</p>
+      <Alert variant='success'>Placeholder for message</Alert>
+      <Alert variant='warning'>Placeholder for message</Alert>
+      <Alert close='hide' variant='error'>Placeholder for message</Alert>
       {/* <Button onClick={() => modalRef.current.open()}>Open Modal</Button> */}
       {/* <Modal ref={modalRef}>
         <Modal.Box>

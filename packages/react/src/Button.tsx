@@ -2,8 +2,6 @@ import { FC, HTMLAttributes } from 'react'
 import { ClassNames } from '@emotion/react'
 // @ts-ignore
 import style from '@alisyahidin/core/components/button'
-// @ts-ignore
-import { ICCancel } from '@alisyahidin/icon'
 
 type Variant = 'secondary' | 'primary' | 'alt'
 type Size = 'sm' | 'md' | 'lg'
@@ -36,7 +34,7 @@ const Button: FC<Props> = ({ children, className, variant = 'primary', size = 'm
       )}
       {...props}
     >
-      {children} <ICCancel />
+      {children}
     </button>}
   </ClassNames>
 )

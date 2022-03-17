@@ -1,5 +1,5 @@
 const fs = require('fs')
-const fse = require('fse')
+const fse = require('fs-extra')
 
 const packagePath = process.cwd()
 const targetBuild = './dist'

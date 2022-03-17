@@ -40,7 +40,7 @@ const copyIndexFile = async () => {
 const createPackageFile = async () => {
   const packageJson = await fse.readFile(path.resolve(packagePath, './package.json'), 'utf8')
 
-  const { scripts, devDependencies, ...newPackageJson } = JSON.parse(
+  const { scripts, devDependencies, files, ...newPackageJson } = JSON.parse(
     packageJson,
   )
 

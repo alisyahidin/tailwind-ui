@@ -1,7 +1,34 @@
 .btn {
-  @apply bg-primary text-white border-0 rounded shadow shadow-blue-600 px-8 py-2 m-1;
+  @apply bg-primary text-white border-0 rounded px-4 py-2 text-h2;
+  &:disabled {
+    @apply bg-neutral-30;
+  }
+  &:hover {
+    @apply bg-primary-10;
+  }
+  &:focus {
+    @apply bg-primary-40;
+  }
+}
+
+.btn-sm {
+  @apply text-h3
+}
+
+.btn-md {
+  @apply text-h2
+}
+
+.btn-lg {
+  @apply text-h1 px-6 py-3 ;
 }
 
 .btn-secondary {
-  @apply bg-secondary shadow-pink-700 text-d1;
+  @apply bg-white text-primary border-primary;
+  border-width: 1px;
+  &:hover,
+  &:focus {
+    @apply bg-white text-primary border-primary;
+    border-width: 1px;
+  }
 }

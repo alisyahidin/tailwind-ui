@@ -14,10 +14,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Button>Primary</Button>
-      <button className='btn bg-primary-50'>Primary 50</button>
-      <Button className="bg-pink-500">Override</Button>
+      <Button variant="primary">Primary</Button>
       <Button variant="secondary">Secondary</Button>
+      <Button variant="primary" size="sm">small</Button>
+      <Button variant="primary" size="md">Medium</Button>
+      <Button variant="primary" size="lg">Large</Button>
+      <button className='btn bg-primary-50'>Primary 50</button>
+      <Button className="bg-secondary">Override</Button>
       <Button data-theme="newtheme" variant="secondary">Secondary</Button>
       <Toggle />
       <button className="btn">Overide CSS</button>

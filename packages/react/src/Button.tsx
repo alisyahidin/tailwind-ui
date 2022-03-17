@@ -4,9 +4,11 @@ import { ClassNames } from '@emotion/react'
 import style from '@alisyahidin/core/components/button'
 
 type Variant = 'secondary' | 'primary'
+type Size = 'sm' | 'md' | 'lg'
 
 type Props = {
   variant: Variant
+  size: Size
 } & HTMLAttributes<HTMLButtonElement>
 
 const getVariant = (value: Variant) => ({
@@ -14,13 +16,20 @@ const getVariant = (value: Variant) => ({
   secondary: '.btn-secondary',
 })[value as Variant] ?? null
 
-const Button: FC<Props> = ({ children, className, variant = 'primary', ...props }) => (
+const getSize = (value: Size) => ({
+  sm: '.btn-sm',
+  md: '.btn-md',
+  lg: '.btn-lg'
+})[value as Size] ?? null
+
+const Button: FC<Props> = ({ children, className, variant = 'primary', size = 'md', ...props }) => (
   <ClassNames>
     {({ cx, css }) => <button
       className={cx(
         className,
         css`${style['.btn']}`,
         getVariant(variant) ? css`${style[getVariant(variant)]}` : null,
+        getSize(size) ? css`${style[getSize(size)]}` : null
       )}
       {...props}
     >

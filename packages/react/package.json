@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@alisyahidin/core": "file:../core/dist/",
+    "@alisyahidin/icon": "file:../icon/dist/",
     "@emotion/react": "^11.7.1",
     "react": "^17.0.2"
   },

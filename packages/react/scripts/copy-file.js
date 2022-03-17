@@ -8,6 +8,7 @@ const buildPath = path.join(packagePath, './dist')
 
 const files = [
   { source: require.resolve('@alisyahidin/core/dist/themes.css'), target: `${targetBuild}/themes.css` },
+  { source: './LICENSE.md', target: `${targetBuild}/LICENSE.md` },
 ]
 
 if (!fs.existsSync('./dist')) {

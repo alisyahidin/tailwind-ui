@@ -3,3 +3,69 @@
     line-height: 1.875rem;
     @apply font-medium;
 }
+
+.text-d2 {
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+    @apply font-medium;
+}
+
+.text-h1 {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    @apply font-medium;
+}
+
+.text-h2 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    @apply font-medium;
+}
+
+.text-h3 {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    @apply font-medium;
+}
+
+.text-h4 {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    @apply font-medium;
+}
+
+.text-b1 {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    @apply font-normal;
+}
+
+.text-b2 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    @apply font-normal;
+}
+
+.text-b3 {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    @apply font-normal;
+}
+
+.text-b4 {
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    @apply font-normal;
+}
+
+.text-p1 {
+    font-size: 0.875rem;
+    line-height: 1.313rem;
+    @apply font-normal;
+}
+
+.text-p2 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    @apply font-normal;
+}

@@ -23,7 +23,16 @@ export default function Home() {
       <button className="btn">Overide CSS</button>
       <button className="btn bg-opacity-30">Opacity CSS</button>
       <input className="toggle" type="checkbox" />
-      <p className="text-d1">Test</p>
+      <p className="text-d1">Test d1</p>
+      <p className="text-d2">Test d2</p>
+      <h1 className="text-h1">Test h1</h1>
+      <p className="text-h2">Test h2</p>
+      <p className="text-h3">Test h3</p>
+      <p className="text-h4">Test h4</p>
+      <p className="text-b1">Test b1</p>
+      <p className="text-b2">Test b2</p>
+      <p className="text-b3">Test b3</p>
+      <p className="text-b4">Test b4</p>
       {/* <Button onClick={() => modalRef.current.open()}>Open Modal</Button> */}
       {/* <Modal ref={modalRef}>
         <Modal.Box>

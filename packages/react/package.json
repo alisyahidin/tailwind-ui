@@ -1,7 +1,7 @@
 {
-  "name": "@alisyahidin/react",
+  "name": "react",
   "private": true,
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "> TODO: description",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "license": "ISC",

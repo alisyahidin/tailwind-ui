@@ -32,11 +32,11 @@ const createPackageFile = async () => {
 
   newPackageJson.private = false
   newPackageJson.name = '@alisyahidin/react'
-  newPackageJson.dependencies = [
+  newPackageJson.dependencies = {
     ...newPackageJson.dependencies,
-    { "alisyahidin/core": JSON.parse(await fse.readFile(path.resolve(packagePath, '../core/package.json'), 'utf8')).version },
-    { "alisyahidin/icon": JSON.parse(await fse.readFile(path.resolve(packagePath, '../icon/package.json'), 'utf8')).version },
-  ]
+    "@alisyahidin/core": JSON.parse(await fse.readFile(path.resolve(packagePath, '../core/package.json'), 'utf8')).version,
+    "@alisyahidin/icon": JSON.parse(await fse.readFile(path.resolve(packagePath, '../icon/package.json'), 'utf8')).version,
+  }
   const targetPath = path.resolve(buildPath, './package.json')
 
   await fse.writeFile(targetPath, JSON.stringify(newPackageJson, null, 2), 'utf8')

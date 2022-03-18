@@ -30,7 +30,7 @@ const createPackageFile = async () => {
   )
 
   newPackageJson.private = false
-  newPackageJson.name = '@alisyahidin/react'
+  newPackageJson.name = '@alisyahidin/icon'
   const targetPath = path.resolve(buildPath, './package.json')
 
   await fse.writeFile(targetPath, JSON.stringify(newPackageJson, null, 2), 'utf8')

@@ -2,6 +2,7 @@ import { FC, HTMLAttributes } from 'react'
 import { ClassNames } from '@emotion/react'
 // @ts-ignore
 import style from '@alisyahidin/core/components/alert'
+// @ts-ignore
 import ICCancel from '@alisyahidin/icon/ic_cancel'
 
 type Variant = 'success' | 'warning' | 'error'

@@ -12,12 +12,15 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc && node ./scripts/copy-file"
+    "build": "tsc && node ./scripts/copy-file",
+    "svgr": "svgr --out-dir src --typescript --icon -- icons",
+    "watch": "tsc --watch"
   },
   "dependencies": {
     "react": "^17.0.2"
   },
   "devDependencies": {
+    "@svgr/cli": "^6.2.1",
     "@types/react": "^17.0.38",
     "typescript": "^4.5.5"
   }

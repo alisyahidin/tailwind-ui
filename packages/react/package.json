@@ -11,7 +11,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc && node ./scripts/copy-file"
+    "build": "tsc && node ./scripts/copy-file",
+    "watch": "tsc --watch"
   },
   "dependencies": {
     "@alisyahidin/core": "file:../core/dist/",

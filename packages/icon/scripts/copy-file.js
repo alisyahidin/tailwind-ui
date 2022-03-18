@@ -8,6 +8,7 @@ const buildPath = path.join(packagePath, './dist')
 
 const files = [
   { source: './LICENSE.md', target: `${targetBuild}/LICENSE.md` },
+  { source: './icons', target: `${targetBuild}/icons` },
 ]
 
 if (!fs.existsSync('./dist')) {
@@ -15,7 +16,7 @@ if (!fs.existsSync('./dist')) {
 }
 
 files.forEach(item => {
-  fs.copyFile(item.source, item.target, (err) => {
+  fse.copy(item.source, item.target, (err) => {
     if (err) throw err
     console.log(`${item.source} succesfully copied`)
   })

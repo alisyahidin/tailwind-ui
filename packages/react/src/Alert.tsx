@@ -3,9 +3,7 @@ import { ClassNames } from '@emotion/react'
 // @ts-ignore
 import style from '@alisyahidin/core/components/alert'
 // @ts-ignore
-import ICCancel from '@alisyahidin/icon/ic_cancel'
-// @ts-ignore
-import ICCancel2 from '@alisyahidin/icon/ic_cancel2'
+import IcCancel from '@alisyahidin/icon/IcCancel'
 
 type Variant = 'success' | 'warning' | 'error'
 type Close = 'show' | 'hide'
@@ -31,7 +29,7 @@ const Alert: FC<Props> = ({ children, className, variant = 'success', close = 's
             )}
         >
             {children}
-            {close === 'show' ? <div className='alert-icon'><ICCancel2 width={16} height={16} /></div> : null}
+            {close === 'show' ? <div className='alert-icon'><IcCancel width={24} height={24} /></div> : null}
         </div>}
     </ClassNames>
 )

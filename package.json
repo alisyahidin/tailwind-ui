@@ -17,7 +17,7 @@
     "icon": "yarn workspace @alisyahidin/icon",
     "icon:build": "yarn workspace @alisyahidin/icon build",
     "bump-version": "lerna version --no-git-tag-version --no-private",
-    "release": "yarn core:build && yarn react:build && lerna publish from-package --dist-tag latest",
+    "release": "yarn core:build && yarn react:build && lerna publish from-package --dist-tag latest --contents dist",
     "build": "yarn core:build && yarn icon:build && yarn react:build",
     "postinstall": "yarn build"
   },

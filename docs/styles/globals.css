@@ -5,11 +5,13 @@
 
 .grid-container aside {
     grid-area: aside;
+
     min-height: 100vh;
 }
 
 .grid-container main {
     grid-area: main;
+
     padding: 2em;
 }
 
@@ -17,6 +19,6 @@
     display: grid;
     grid-template-areas:
         'aside main';
-    grid-template-columns: 200px 100%;
+    grid-template-columns: 200px calc(100% - 215px);
     gap: 10px;
 }

@@ -23,7 +23,7 @@ const AlertList = () => {
                     <Alert>Placeholder for message</Alert>
                 </div>
                 <div className='flex mb-4'>
-                    <Alert close='hide'>Placeholder for message</Alert>
+                    <Alert close='hide' icon={false}>Placeholder for message</Alert>
                 </div>
             </div>
         </>

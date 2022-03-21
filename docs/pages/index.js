@@ -1,9 +1,6 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
-import Button from '@alisyahidin/react/Button'
 import Toggle from '@alisyahidin/react/Toggle'
-import Alert from '@alisyahidin/react/Alert'
-// import Modal from '@alisyahidin/react/Modal'
 import { IcCancel } from '@alisyahidin/icon'
 import ButtonList from './tabs/ButtonList'
 import AlertList from './tabs/AlertList'
@@ -11,7 +8,6 @@ import TypographList from './tabs/TypographList'
 import ModalList from './tabs/ModalList'
 
 export default function Home() {
-  const modalRef = useRef(null)
   const [active, setActive] = useState(1);
   const tabItems = [
     {
@@ -78,29 +74,6 @@ export default function Home() {
         </main>
       </div>
 
-
-      {/* test */}
-      {/* <div>
-        <div className="flex flex-col items-center justify-center">
-          <ul className="flex flex-col border-b border-gray-200 mb-8">
-            {tabItems.map(({ id, icon, title }) => <TabItemComponent
-              key={title}
-              icon={icon}
-              title={title}
-              onItemClicked={() => setActive(id)}
-              isActive={active === id}
-            />
-            )}
-          </ul>
-          <div className="container">
-            {tabItems.map(({ id, content }) => {
-              return active === id ? content : ''
-            })}
-          </div>
-        </div>
-
-      </div> */}
-      {/* end test */}
 
       <IcCancel />
 

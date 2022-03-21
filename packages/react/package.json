@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "@alisyahidin/react",
   "private": true,
   "version": "1.0.10",
   "description": "> TODO: description",
@@ -15,8 +15,8 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "@alisyahidin/core": "file:../core/dist/",
-    "@alisyahidin/icon": "file:../icon/dist/",
+    "@alisyahidin/core": "^1.3.1",
+    "@alisyahidin/icon": "^1.0.1",
     "@emotion/react": "^11.7.1",
     "react": "^17.0.2"
   },

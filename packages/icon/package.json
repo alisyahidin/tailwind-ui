@@ -12,9 +12,10 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsc && node ./scripts/copy-file",
     "svgr": "svgr --out-dir src --typescript --icon -- icons",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "build": "tsc && node ./scripts/copy-file",
+    "release": "npm run build && npm publish dist"
   },
   "dependencies": {
     "react": "^17.0.2"

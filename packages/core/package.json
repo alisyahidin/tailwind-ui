@@ -38,7 +38,8 @@
     "themes": "postcss ./src/themes/index.css -o ./dist/themes.css --config ./src/themes",
     "clear:build": "rm -Rf ./dist",
     "watch:build": "watch 'npm run build' src",
-    "build": "npm run clear:build && npm run copy && npm run utilities && npm run components && npm run themes"
+    "build": "npm run clear:build && npm run copy && npm run utilities && npm run components && npm run themes",
+    "release": "npm run build && npm publish dist"
   },
   "publishConfig": {
     "access": "public"

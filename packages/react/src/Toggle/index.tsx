@@ -6,7 +6,7 @@ import style from '@alisyahidin/core/components/toggle'
 type Props = HTMLAttributes<HTMLInputElement>
 
 const Toggle: FC<Props> = ({ className, ...props }) => <ClassNames>
-  {({ cx, css }) => <input {...props} type="checkbox" className={cx(className, css`${style['.toggle']}`)} />}
+    {({ cx, css }) => <input {...props} type="checkbox" className={cx(className, css`${style['.toggle']}`)} />}
 </ClassNames>
 
 export default Toggle

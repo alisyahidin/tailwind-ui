@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.grid-container aside {
+    grid-area: aside;
+    min-height: 100vh;
+}
+
+.grid-container main {
+    grid-area: main;
+    padding: 2em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'aside main';
+    grid-template-columns: 200px 100%;
+    gap: 10px;
+}

@@ -38,5 +38,3 @@
 .alert-error {
     @apply border-support-error bg-alert-error text-support-error;
 }
-
-@media screen ()

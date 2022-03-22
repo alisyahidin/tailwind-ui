@@ -1,5 +1,5 @@
 import React from 'react'
-import Alert from '@alisyahidin/react/Alert'
+import { Alert } from '@alisyahidin/react'
 
 const AlertList = () => {
     return (

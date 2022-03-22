@@ -2,9 +2,15 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
+  "npmClientArgs": [
+    "--no-lockfile"
+  ],
   "command": {
     "publish": {
       "registry": "https://registry.npmjs.org"
     }
-  }
+  },
+  "packages": [
+    "packages/*"
+  ]
 }

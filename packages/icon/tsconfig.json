@@ -1,21 +1,14 @@
 {
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
   "include": [
-    "src",
-    "scripts/copy-file.js"
+    "src/**/*"
   ],
   "exclude": [
     "./**/*.js",
-  ],
-  "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "target": "es2016",
-    "module": "commonjs",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-  }
+  ]
 }

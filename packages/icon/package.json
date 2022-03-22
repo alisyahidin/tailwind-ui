@@ -6,15 +6,15 @@
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "homepage": "https://sg-edts.com",
   "license": "ISC",
-  "types": "./index.d.ts",
-  "main": "./index.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "svgr": "svgr --out-dir src --typescript --icon -- icons",
     "watch": "tsc --watch",
-    "build": "tsc && node ./scripts/copy-file",
+    "build": "tsc --build && node ./scripts/copy-file",
     "release": "npm run build && npm publish dist"
   },
   "dependencies": {

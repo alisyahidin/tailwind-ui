@@ -26,11 +26,13 @@ files.forEach(item => {
 const createPackageFile = async () => {
   const packageJson = await fse.readFile(path.resolve(packagePath, './package.json'), 'utf8')
 
-  const { scripts, devDependencies, ...newPackageJson } = JSON.parse(
+  const { scripts, devDependencies, main, types, ...newPackageJson } = JSON.parse(
     packageJson,
   )
 
   newPackageJson.private = false
+  newPackageJson.main = './index.js'
+  newPackageJson.types = './index.d.ts'
   newPackageJson.name = '@alisyahidin/react'
   newPackageJson.dependencies = {
     ...newPackageJson.dependencies,

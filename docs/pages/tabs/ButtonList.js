@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '@alisyahidin/react/Button'
+import { Button } from '@alisyahidin/react'
 
 const ButtonList = () => {
     return (
@@ -45,7 +45,7 @@ const ButtonList = () => {
                     <button className="btn">Overide CSS</button>
                 </div>
                 <div className='mr-4'>
-                    <button className="btn bg-primary bg-opacity-30">Opacity CSS</button>
+                    <button className="btn btn-secondary">Opacity CSS</button>
                 </div>
             </div>
 

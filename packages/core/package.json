@@ -6,13 +6,7 @@
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "homepage": "https://sg-edts.com",
   "license": "ISC",
-  "main": "./index.js",
-  "files": [
-    "styles/**/*.js",
-    "styles/themes.css",
-    "index.js",
-    "colors"
-  ],
+  "main": "./dist/index.js",
   "dependencies": {
     "css-selector-tokenizer": "^0.8.0",
     "postcss-js": "^4.0.0"
@@ -36,8 +30,8 @@
     "utilities": "cat ./dist/utilities/*.css > ./dist/utilities/index.css",
     "postutilities": "prejss-cli dist/utilities/index.css --format commonjs",
     "themes": "postcss ./src/themes/index.css -o ./dist/themes.css --config ./src/themes",
-    "clear:build": "rm -Rf ./dist",
-    "watch:build": "watch 'npm run build' src",
+    "clear:build": "rimraf ./dist",
+    "watch": "watch 'npm run build' src",
     "build": "npm run clear:build && npm run copy && npm run utilities && npm run components && npm run themes",
     "release": "npm run build && npm publish dist"
   },

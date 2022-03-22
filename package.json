@@ -7,9 +7,9 @@
   },
   "scripts": {
     "docs": "yarn workspace docs",
-    "docs:dev": "yarn workspace docs dev",
-    "docs:build": "yarn workspace docs build",
-    "docs:start": "yarn workspace docs start",
+    "docs:dev": "yarn docs dev",
+    "docs:build": "yarn docs build",
+    "docs:start": "yarn docs start",
     "core": "yarn workspace @alisyahidin/core",
     "core:build": "yarn core build",
     "core:release": "yarn core release",
@@ -19,7 +19,8 @@
     "icon": "yarn workspace @alisyahidin/icon",
     "icon:build": "yarn icon build",
     "icon:release": "yarn icon release",
-    "release": "yarn core:release && yarn icon:release && yarn react:release",
+    "watch": "lerna run watch --stream --scope @alisyahidin/*",
+    "release": "lerna run release --scope @alisyahidin/*",
     "build": "yarn core:build && yarn icon:build && yarn react:build",
     "postinstall": "yarn build"
   },

@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
-import Button from '@alisyahidin/react/Button'
-import Modal from '@alisyahidin/react/Modal'
+import { Button, Modal } from '@alisyahidin/react'
 
 const ModalList = () => {
     const modalRef = useRef(null)

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Head from 'next/head'
-import Toggle from '@alisyahidin/react/Toggle'
+import { Toggle } from '@alisyahidin/react'
 import { IcCancel } from '@alisyahidin/icon'
 import ButtonList from './tabs/ButtonList'
 import AlertList from './tabs/AlertList'

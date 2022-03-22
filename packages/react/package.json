@@ -5,18 +5,19 @@
   "description": "> TODO: description",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "license": "ISC",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "watch": "tsc --watch",
-    "build": "tsc && node ./scripts/copy-file",
+    "build": "yarn clean && tsc --build && node ./scripts/copy-file",
     "release": "npm run build && npm publish dist"
   },
   "dependencies": {
-    "@alisyahidin/core": "^1.3.1",
+    "@alisyahidin/core": "file:../core/dist",
     "@alisyahidin/icon": "^1.0.1",
     "@emotion/react": "^11.7.1",
     "react": "^17.0.2"

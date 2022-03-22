@@ -40,12 +40,19 @@ const copyIndexFile = async () => {
 const createPackageFile = async () => {
   const packageJson = await fse.readFile(path.resolve(packagePath, './package.json'), 'utf8')
 
-  const { scripts, devDependencies, files, ...newPackageJson } = JSON.parse(
+  const { scripts, devDependencies, main, files, ...newPackageJson } = JSON.parse(
     packageJson,
   )
 
   newPackageJson.private = false
+  newPackageJson.main = './index.js'
   newPackageJson.name = '@alisyahidin/core'
+  newPackageJson.files = [
+    "styles/**/*.js",
+    "styles/themes.css",
+    "index.js",
+    "colors"
+  ]
   const targetPath = path.resolve(buildPath, './package.json')
 
   await fse.writeFile(targetPath, JSON.stringify(newPackageJson, null, 2), 'utf8')

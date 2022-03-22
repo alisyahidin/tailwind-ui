@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": "./packages",
+    "paths": {
+      "@alisyahidin/core/*": [
+        "core/dist/*"
+      ],
+      "@alisyahidin/icon/*": [
+        "icon/dist/*"
+      ],
+      "@alisyahidin/react/*": [
+        "react/dist/*"
+      ]
+    }
+  }
+}

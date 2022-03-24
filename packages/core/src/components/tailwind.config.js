@@ -10,10 +10,10 @@ module.exports = {
   },
   plugins: [
     plugin(function ({ addBase, addUtilities }) {
-      // addBase(require('../../dist/base'))
-      addUtilities(require('../../dist/utilities'), { variants: ['responsive'] })
-      // addUtilities(require('../../dist/utilities-unstyled'), { variants: ['responsive'] })
-      // addUtilities(require('../../dist/utilities-styled'), { variants: ['responsive'] })
+      // addBase(require('../../base'))
+      addUtilities(require('../../utilities'), { variants: ['responsive'] })
+      // addUtilities(require('../../utilities-unstyled'), { variants: ['responsive'] })
+      // addUtilities(require('../../utilities-styled'), { variants: ['responsive'] })
     })
   ],
 }

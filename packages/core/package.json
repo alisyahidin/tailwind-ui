@@ -8,11 +8,12 @@
   "license": "ISC",
   "main": "./index.js",
   "files": [
+    "index.js",
     "src/colors",
     "components/",
     "utilities/",
-    "themes.css",
-    "index.js"
+    "lib/",
+    "themes.css"
   ],
   "dependencies": {
     "css-selector-tokenizer": "^0.8.0",
@@ -29,13 +30,13 @@
     "watch": "^1.0.2"
   },
   "scripts": {
-    "precomponents": "postcss --config src/components src/components/**/*.css --dir ./components",
+    "precomponents": "postcss --config config/components src/components/**/*.css --dir ./components",
     "components": "cat ./components/*.css > ./components/index.css",
     "postcomponents": "prejss-cli ./components/ --format commonjs",
-    "preutilities": "postcss --config src/utilities src/utilities/**/*.css --dir ./utilities",
+    "preutilities": "postcss --config config/utilities src/utilities/**/*.css --dir ./utilities",
     "utilities": "cat ./utilities/*.css > ./utilities/index.css",
     "postutilities": "prejss-cli ./utilities/index.css --format commonjs",
-    "themes": "postcss ./src/themes/index.css -o ./themes.css --config ./src/themes",
+    "themes": "postcss ./src/themes/index.css -o ./themes.css --config ./config/themes",
     "clear:build": "rimraf ./colors ./components ./utilities ./themes.css",
     "watch": "watch 'npm run build' src",
     "build": "npm run clear:build && npm run utilities && npm run components && npm run themes",

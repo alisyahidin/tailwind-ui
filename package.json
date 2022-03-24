@@ -22,7 +22,8 @@
     "watch:core": "lerna run watch --stream --scope @alisyahidin/core",
     "watch:icon": "lerna run watch --stream --scope @alisyahidin/icon",
     "watch:react": "lerna run watch --stream --scope @alisyahidin/react",
-    "release": "lerna run release --scope @alisyahidin/*",
+    "bump-version": "lerna version --no-git-tag-version --no-private",
+    "release": "lerna run release --stream --scope @alisyahidin/*",
     "build": "yarn core:build",
     "postinstall": "yarn build"
   },

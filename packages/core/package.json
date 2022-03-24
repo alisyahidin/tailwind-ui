@@ -37,7 +37,8 @@
     "themes": "postcss ./src/themes/index.css -o ./themes.css --config ./src/themes",
     "clear:build": "rimraf ./colors ./components ./utilities ./themes.css",
     "watch": "watch 'npm run build' src",
-    "build": "npm run clear:build && npm run utilities && npm run components && npm run themes"
+    "build": "npm run clear:build && npm run utilities && npm run components && npm run themes",
+    "release": "npm run build && npm publish"
   },
   "publishConfig": {
     "access": "public"

@@ -11,7 +11,8 @@
     "src/colors",
     "components/",
     "utilities/",
-    "themes.css"
+    "themes.css",
+    "index.js"
   ],
   "dependencies": {
     "css-selector-tokenizer": "^0.8.0",

@@ -12,7 +12,7 @@ const mainFunction = ({ addComponents, addBase, addUtilities, config }) => {
   if (prefix) {
     try {
       postcssJs = require("postcss-js")
-      postcssPrefix = require('./lib/postcss-prefixer')
+      postcssPrefix = require('./config/postcss-prefixer')
     } catch (error) {
       console.error(`Error occurred and prevent applying the "prefix" option:`, error)
     }

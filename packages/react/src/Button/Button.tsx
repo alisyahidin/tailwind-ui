@@ -34,6 +34,7 @@ const Button: FC<Props> = ({ children, className, variant = 'primary', size = 'm
             )}
             {...props}
         >
+            {console.log(style)}
             {children}
         </button>}
     </ClassNames>

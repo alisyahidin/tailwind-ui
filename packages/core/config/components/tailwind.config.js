@@ -5,13 +5,13 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      ...require('../../colors')
+      ...require('../../src/colors')
     },
   },
   plugins: [
     plugin(function ({ addBase, addUtilities }) {
       // addBase(require('../../base'))
-      addUtilities(require('../../../utilities'), { variants: ['responsive'] })
+      addUtilities(require('../../utilities'), { variants: ['responsive'] })
       // addUtilities(require('../../utilities-unstyled'), { variants: ['responsive'] })
       // addUtilities(require('../../utilities-styled'), { variants: ['responsive'] })
     })

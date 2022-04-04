@@ -1,12 +1,20 @@
 {
   "name": "@alisyahidin/core",
-  "private": true,
-  "version": "1.3.3",
+  "private": false,
+  "version": "1.3.7",
   "description": "EDTS Design System",
   "author": "Ali Syahidin <ali.syahidin@sg-dsa.com>",
   "homepage": "https://sg-edts.com",
   "license": "ISC",
-  "main": "./dist/index.js",
+  "main": "./index.js",
+  "files": [
+    "index.js",
+    "src/colors",
+    "components/",
+    "utilities/",
+    "config/",
+    "themes.css"
+  ],
   "dependencies": {
     "css-selector-tokenizer": "^0.8.0",
     "postcss-js": "^4.0.0"
@@ -22,18 +30,17 @@
     "watch": "^1.0.2"
   },
   "scripts": {
-    "copy": "node scripts/copy-file.js",
-    "precomponents": "postcss --config src/components src/components/**/*.css --base src --dir ./dist",
-    "components": "cat ./dist/components/*.css > ./dist/components/index.css",
-    "postcomponents": "prejss-cli ./dist/components/ --format commonjs",
-    "preutilities": "postcss --config src/utilities src/utilities/**/*.css --base src --dir ./dist",
-    "utilities": "cat ./dist/utilities/*.css > ./dist/utilities/index.css",
-    "postutilities": "prejss-cli dist/utilities/index.css --format commonjs",
-    "themes": "postcss ./src/themes/index.css -o ./dist/themes.css --config ./src/themes",
-    "clear:build": "rimraf ./dist",
+    "precomponents": "postcss --config config/components src/components/**/*.css --dir ./components",
+    "components": "cat ./components/*.css > ./components/index.css",
+    "postcomponents": "prejss-cli ./components/ --format commonjs",
+    "preutilities": "postcss --config config/utilities src/utilities/**/*.css --dir ./utilities",
+    "utilities": "cat ./utilities/*.css > ./utilities/index.css",
+    "postutilities": "prejss-cli ./utilities/index.css --format commonjs",
+    "themes": "postcss ./src/themes/index.css -o ./themes.css --config ./config/themes",
+    "clear:build": "rimraf ./colors ./components ./utilities ./themes.css",
     "watch": "watch 'npm run build' src",
-    "build": "npm run clear:build && npm run copy && npm run utilities && npm run components && npm run themes",
-    "release": "npm run build && npm publish dist"
+    "build": "npm run clear:build && npm run utilities && npm run components && npm run themes",
+    "release": "npm run build && npm publish"
   },
   "publishConfig": {
     "access": "public"

@@ -2,23 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .grid-container aside {
-    grid-area: aside;
+  grid-area: aside;
 
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .grid-container main {
-    grid-area: main;
+  grid-area: main;
 
-    padding: 2em;
+  padding: 2em;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-areas:
-        'aside main';
-    grid-template-columns: 200px calc(100% - 215px);
-    gap: 10px;
+  display: grid;
+  grid-template-areas: "aside main";
+  grid-template-columns: 200px calc(100% - 215px);
+  gap: 10px;
+}
+
+.rules {
+}
+.rules ul {
+  list-style: disc;
 }

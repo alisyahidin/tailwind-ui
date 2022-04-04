@@ -1,49 +1,63 @@
-import { useState } from 'react'
-import Head from 'next/head'
-import ButtonList from './tabs/ButtonList'
-import AlertList from './tabs/AlertList'
-import TypographList from './tabs/TypographList'
-import ModalList from './tabs/ModalList'
+import { useState } from "react";
+import Head from "next/head";
+import ButtonList from "./tabs/ButtonList";
+import AlertList from "./tabs/AlertList";
+import TypographList from "./tabs/TypographList";
+import ModalList from "./tabs/ModalList";
+import RulesList from "./tabs/RulesList";
 
 export default function Home() {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(5);
   const tabItems = [
     {
       id: 1,
-      title: 'Button',
+      title: "Button",
       content: <ButtonList />,
       type: 'atom'
     },
     {
       id: 2,
-      title: 'Typograph',
+      title: "Typograph",
       content: <TypographList />,
       type: 'atom'
     },
     {
       id: 3,
-      title: 'Alert',
+      title: "Alert",
       content: <AlertList />,
       type: 'atom'
     },
     {
       id: 4,
-      title: 'Modal',
+      title: "Modal",
       content: <ModalList />,
       type: 'molecule'
+    },
+    {
+      id: 5,
+      title: "Rules & Documentation",
+      content: <RulesList />,
     },
   ];
 
   const TabItemComponent = ({
-    title = '',
-    onItemClicked = () => console.error('You passed no action to the component'),
+    title = "",
+    onItemClicked = () =>
+      console.error("You passed no action to the component"),
     isActive = false,
   }) => {
     return (
       <li className="mr-2 border-b">
-        <a href="#" className={`flex text-gray-500 hover:text-gray-600 hover:bg-gray-50 py-4 px-4 text-sm font-medium text-center ${isActive ? 'text-primary active' : ''}`} onClick={onItemClicked}>{title}</a>
+        <a
+          href="#"
+          className={`flex text-gray-500 hover:text-gray-600 hover:bg-gray-50 py-4 px-4 text-sm font-medium text-center ${isActive ? "text-primary active" : ""
+            }`}
+          onClick={onItemClicked}
+        >
+          {title}
+        </a>
       </li>
-    )
+    );
   };
 
   return (
@@ -53,7 +67,7 @@ export default function Home() {
         <meta name="description" content="EDTS UI Framework" />
         <link rel="icon" href="/edts-ico.png" />
       </Head>
-      <div className='grid-container'>
+      <div className="grid-container">
         <aside>
           <div className="flex flex-col border-gray-200 p-4 font-bold">ATOMS</div>
           <ul className="flex flex-col border-gray-200 mb-8">
@@ -91,17 +105,15 @@ export default function Home() {
         </aside>
         <main>
           {tabItems.map(({ id, content }) => {
-            return active === id ? content : ''
+            return active === id ? content : "";
           })}
         </main>
       </div>
-
 
       {/* <IcCancel />
 
       <Toggle />
       <input className="toggle" type="checkbox" /> */}
-
     </div>
-  )
+  );
 }

@@ -9,18 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@alisyahidin/icon": "^1.0.0",
-    "@alisyahidin/react": "^1.0.1",
+    "@alisyahidin/react": "^1.0.11",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@alisyahidin/core": "^1.3.1",
-    "@babel/core": "^7.17.5",
     "autoprefixer": "^10.4.2",
-    "babel-loader": "^8.2.3",
-    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
     "postcss": "^8.4.5",

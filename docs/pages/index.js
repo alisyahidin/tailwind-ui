@@ -37,6 +37,7 @@ export default function Home() {
       id: 5,
       title: "Rules & Documentation",
       content: <RulesList />,
+      type: 'docs'
     },
   ];
 
@@ -94,6 +95,17 @@ export default function Home() {
           <div className="flex flex-col border-gray-200 p-4 font-bold">ORGANISMS</div>
           <ul className="flex flex-col border-gray-200 mb-8">
             {tabItems.filter(({ type }) => type === 'organism')
+              .map(({ id, title }) => <TabItemComponent
+                key={title}
+                title={title}
+                onItemClicked={() => setActive(id)}
+                isActive={active === id}
+              />
+              )}
+          </ul>
+          <div className="flex flex-col border-gray-200 p-4 font-bold">RULES</div>
+          <ul className="flex flex-col border-gray-200 mb-8">
+            {tabItems.filter(({ type }) => type === 'docs')
               .map(({ id, title }) => <TabItemComponent
                 key={title}
                 title={title}

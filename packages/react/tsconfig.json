@@ -5,21 +5,11 @@
     "jsxImportSource": "@emotion/react",
     "rootDir": "./src",
     "outDir": "./dist",
-    "paths": {
-      "@alisyahidin/core": [
-        "../core/dist/"
-      ]
-    }
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "./**/*.js",
-  ],
-  "references": [
-    {
-      "path": "../icon"
-    },
-  ],
+  ]
 }

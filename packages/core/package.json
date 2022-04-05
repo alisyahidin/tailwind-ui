@@ -12,7 +12,7 @@
     "src/colors",
     "components/",
     "utilities/",
-    "config/",
+    "config/postcss-prefixed",
     "themes.css"
   ],
   "dependencies": {

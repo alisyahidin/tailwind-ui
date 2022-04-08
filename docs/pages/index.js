@@ -1,66 +1,7 @@
-import { useState } from "react";
 import Head from "next/head";
-import ButtonList from "./tabs/ButtonList";
-import AlertList from "./tabs/AlertList";
-import TypographList from "./tabs/TypographList";
-import ModalList from "./tabs/ModalList";
-import RulesList from "./tabs/RulesList";
+import Image from 'next/image'
 
 export default function Home() {
-  const [active, setActive] = useState(5);
-  const tabItems = [
-    {
-      id: 1,
-      title: "Button",
-      content: <ButtonList />,
-      type: 'atom'
-    },
-    {
-      id: 2,
-      title: "Typograph",
-      content: <TypographList />,
-      type: 'atom'
-    },
-    {
-      id: 3,
-      title: "Alert",
-      content: <AlertList />,
-      type: 'atom'
-    },
-    {
-      id: 4,
-      title: "Modal",
-      content: <ModalList />,
-      type: 'molecule'
-    },
-    {
-      id: 5,
-      title: "Rules & Documentation",
-      content: <RulesList />,
-      type: 'docs'
-    },
-  ];
-
-  const TabItemComponent = ({
-    title = "",
-    onItemClicked = () =>
-      console.error("You passed no action to the component"),
-    isActive = false,
-  }) => {
-    return (
-      <li className="mr-2 border-b">
-        <a
-          href="#"
-          className={`flex text-gray-500 hover:text-gray-600 hover:bg-gray-50 py-4 px-4 text-sm font-medium text-center ${isActive ? "text-primary active" : ""
-            }`}
-          onClick={onItemClicked}
-        >
-          {title}
-        </a>
-      </li>
-    );
-  };
-
   return (
     <div>
       <Head>
@@ -68,64 +9,49 @@ export default function Home() {
         <meta name="description" content="EDTS UI Framework" />
         <link rel="icon" href="/edts-ico.png" />
       </Head>
-      <div className="grid-container">
-        <aside>
-          <div className="flex flex-col border-gray-200 p-4 font-bold">ATOMS</div>
-          <ul className="flex flex-col border-gray-200 mb-8">
-            {tabItems.filter(({ type }) => type === 'atom')
-              .map(({ id, title }) => <TabItemComponent
-                key={title}
-                title={title}
-                onItemClicked={() => setActive(id)}
-                isActive={active === id}
-              />
-              )}
+
+      <div className="rules">
+        <h1 className="text-d1 mb-8"> Rules Styling Core Package</h1>
+        <div className="flex mb-32">
+          <div className="flex gap-x-4">
+            <Image
+              src={"/assets/organise-css-properties.png"}
+              alt="Organise css properties"
+              width='600'
+              height='600'
+              objectFit='contain' />
+            <Image
+              src={"/assets/organise-css-writing.png"}
+              alt="Organise css writing"
+              width='600'
+              height='600'
+              objectFit='contain' />
+          </div>
+        </div>
+
+        <h1 className="text-d1 mb-8"> Rules React Package</h1>
+        <div className="flex mb-32">
+          <ul>
+            <li>Every component must create in folder</li>
+            <li>Value props Type size using &quot;sm&quot; , &quot;md&quot;, &quot;lg&quot;, ect</li>
           </ul>
-          <div className="flex flex-col border-gray-200 p-4 font-bold">MOLECULES</div>
-          <ul className="flex flex-col border-gray-200 mb-8">
-            {tabItems.filter(({ type }) => type === 'molecule')
-              .map(({ id, title }) => <TabItemComponent
-                key={title}
-                title={title}
-                onItemClicked={() => setActive(id)}
-                isActive={active === id}
-              />
-              )}
+        </div>
+
+        <h1 className="text-d1 mb-8"> Step by step Create Component</h1>
+        <div className="flex mb-32">
+          <ul>
+            <li>Create New Branch with Component name clone from Master</li>
+            <li>
+              Create style component in folder
+              master-ui-tailwind/packages/core/src/components
+            </li>
+            <li>
+              Create react component in folder
+              master-ui-tailwind/packages/react/src
+            </li>
           </ul>
-          <div className="flex flex-col border-gray-200 p-4 font-bold">ORGANISMS</div>
-          <ul className="flex flex-col border-gray-200 mb-8">
-            {tabItems.filter(({ type }) => type === 'organism')
-              .map(({ id, title }) => <TabItemComponent
-                key={title}
-                title={title}
-                onItemClicked={() => setActive(id)}
-                isActive={active === id}
-              />
-              )}
-          </ul>
-          <div className="flex flex-col border-gray-200 p-4 font-bold">RULES</div>
-          <ul className="flex flex-col border-gray-200 mb-8">
-            {tabItems.filter(({ type }) => type === 'docs')
-              .map(({ id, title }) => <TabItemComponent
-                key={title}
-                title={title}
-                onItemClicked={() => setActive(id)}
-                isActive={active === id}
-              />
-              )}
-          </ul>
-        </aside>
-        <main>
-          {tabItems.map(({ id, content }) => {
-            return active === id ? content : "";
-          })}
-        </main>
+        </div>
       </div>
-
-      {/* <IcCancel />
-
-      <Toggle />
-      <input className="toggle" type="checkbox" /> */}
     </div>
   );
 }

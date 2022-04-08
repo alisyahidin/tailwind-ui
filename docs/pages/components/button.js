@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "@alisyahidin/react";
 
 const ButtonList = () => {
@@ -60,4 +59,4 @@ const ButtonList = () => {
   );
 };
 
-export default ButtonList;
+export default ButtonList

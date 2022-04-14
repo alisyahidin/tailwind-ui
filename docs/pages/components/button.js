@@ -1,59 +1,33 @@
-import { Button } from "@alisyahidin/react";
+import Button from "@alisyahidin/react/dist/Button";
 
 const ButtonList = () => {
   return (
     <div>
-      <h1 className="text-d1 mb-8"> Variant </h1>
-      <div className="flex mb-32">
-        <div className="mr-4">
-          <Button variant="primary">Primary</Button>
-        </div>
-        <div className="mr-4">
-          <Button variant="secondary">Secondary</Button>
-        </div>
-        <div className="mr-4">
-          <Button variant="alt">Alternative</Button>
-        </div>
+      <h2 className="text-d1 mb-8">Default</h2>
+      <div className="flex mb-28">
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="success">Success</Button>
+        <Button disabled>Disabled</Button>
+        <Button variant="ghost">Ghost</Button>
+        <button className="btn">Primary</button>
+        <button className="btn btn-secondary">Secondary</button>
+        <button className="btn btn-success">Success</button>
+        <button disabled className="btn">Disabled</button>
+        <button className="btn btn-ghost">Ghost</button>
       </div>
-
-      <h1 className="text-d1 mb-8"> Size </h1>
-      <div className="flex mb-32">
-        <div className="mr-4">
-          <Button variant="primary" size="sm">
-            small
-          </Button>
-        </div>
-        <div className="mr-4">
-          <Button variant="primary" size="md">
-            Medium
-          </Button>
-        </div>
-        <div className="mr-4">
-          <Button variant="primary" size="lg">
-            Large
-          </Button>
-        </div>
-      </div>
-
-      <h1 className="text-d1 mb-8">Others </h1>
-      <div className="flex mb-32">
-        <div className="mr-4">
-          <button className="btn bg-primary-50">Primary 50</button>
-        </div>
-        <div className="mr-4">
-          <Button className="bg-secondary">Override</Button>
-        </div>
-        <div className="mr-4">
-          <Button data-theme="newtheme" variant="secondary">
-            Secondary
-          </Button>
-        </div>
-        <div className="mr-4">
-          <button className="btn">Overide CSS</button>
-        </div>
-        <div className="mr-4">
-          <button className="btn btn-secondary">Opacity CSS</button>
-        </div>
+      <h2 className="text-d1 mb-8">Outline</h2>
+      <div className="flex mb-28">
+        <Button variant="primary" outlined>Primary</Button>
+        <Button variant="secondary" outlined>Secondary</Button>
+        <Button variant="success" outlined>Success</Button>
+        <Button disabled outlined>Disabled</Button>
+        <Button variant="ghost" outlined>Ghost</Button>
+        <button className="btn btn-outline">Primary</button>
+        <button className="btn btn-outline btn-secondary">Secondary</button>
+        <button className="btn btn-outline btn-success">Success</button>
+        <button disabled className="btn btn-outline">Default</button>
+        <button className="btn btn-outline btn-ghost">Ghost</button>
       </div>
     </div>
   );

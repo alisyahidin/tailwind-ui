@@ -26,7 +26,7 @@ files.forEach(item => {
 const createPackageFile = async () => {
   const packageJson = await fse.readFile(path.resolve(packagePath, './package.json'), 'utf8')
 
-  const { scripts, devDependencies, main, types, ...newPackageJson } = JSON.parse(
+  const { scripts, devDependencies, babelMacros, main, types, ...newPackageJson } = JSON.parse(
     packageJson,
   )
 

@@ -11,18 +11,6 @@ export default [
         path: '/components/button',
         title: 'Button',
       },
-      {
-        path: '/components/alert',
-        title: 'Alert',
-      },
-      {
-        path: '/components/typography',
-        title: 'Typography',
-      },
-      {
-        path: '/components/modal',
-        title: 'Modal',
-      },
     ]
   },
   {

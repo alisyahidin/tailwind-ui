@@ -5,7 +5,7 @@ const ButtonList = () => {
     <div>
       <h2 className="text-d1 mb-8">Default</h2>
       <div className="flex mb-28">
-        <Button variant="primary">Primary</Button>
+        <Button>Primary</Button>
         <Button variant="secondary">Secondary</Button>
         <Button variant="success">Success</Button>
         <Button disabled>Disabled</Button>
@@ -18,7 +18,7 @@ const ButtonList = () => {
       </div>
       <h2 className="text-d1 mb-8">Outline</h2>
       <div className="flex mb-28">
-        <Button variant="primary" outlined>Primary</Button>
+        <Button outlined>Primary</Button>
         <Button variant="secondary" outlined>Secondary</Button>
         <Button variant="success" outlined>Success</Button>
         <Button disabled outlined>Disabled</Button>

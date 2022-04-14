@@ -6,7 +6,7 @@
   &:disabled {
     @apply bg-neutral-30 border-neutral-30 cursor-not-allowed text-white !important;
   }
-  &:not(:disabled,.btn-ghost).btn-outline {
+  &.btn-outline:not(:disabled) {
     @apply text-primary;
   }
 

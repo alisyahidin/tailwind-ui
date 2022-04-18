@@ -32,7 +32,7 @@
   "scripts": {
     "precomponents": "postcss --config config/components src/components/**/*.css --dir ./components",
     "components": "cat ./components/*.css > ./components/index.css",
-    "postcomponents": "prejss-cli ./components/ --format commonjs",
+    "postcomponents": "prejss-cli ./components/index.css --format commonjs",
     "preutilities": "postcss --config config/utilities src/utilities/**/*.css --dir ./utilities",
     "utilities": "cat ./utilities/*.css > ./utilities/index.css",
     "postutilities": "prejss-cli ./utilities/index.css --format commonjs",

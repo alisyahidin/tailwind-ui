@@ -8,9 +8,5 @@ module.exports = {
       ...require('../../src/colors')
     },
   },
-  plugins: [
-    plugin(function ({ addUtilities }) {
-      addUtilities(require('../../utilities'), { variants: ['responsive'] })
-    })
-  ],
+  plugins: [],
 }

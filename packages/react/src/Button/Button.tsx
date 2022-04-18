@@ -22,7 +22,6 @@ const Button: FC<Props> = ({ children, variant = 'primary', outlined, ...props }
         ]}
         {...props}
     >
-        {console.log(tw`btn btn-primary`)}
         {children}
     </button>
 )

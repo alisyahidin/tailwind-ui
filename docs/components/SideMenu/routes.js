@@ -4,17 +4,7 @@ export default [
     title: 'Home',
   },
   {
-    path: null,
-    title: 'Atoms',
-    children: [
-      {
-        path: '/components/button',
-        title: 'Button',
-      },
-    ]
-  },
-  {
-    path: null,
-    title: 'Molecules',
+    path: '/components/button',
+    title: 'Button',
   },
 ]

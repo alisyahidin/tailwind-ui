@@ -2,7 +2,7 @@ const themes = require('./themes').default
 
 const colorNames = Object.keys(themes).reduce((prev, current) => {
   if (!prev[current]) {
-    prev[current] = `--edts-${current}`
+    prev[current] = `--tui-${current}`
   }
   return prev
 }, {})

@@ -1,20 +1,18 @@
-# EDTS UI
+# Tailwind UI
 
 A brief description of what this project does and who it's for.
 
-
-
 ## Installation
 
-Install @edts/ui with npm:
+Install @alisyahidin/ui with npm:
 
 ```bash
-npm install @edts/ui tailwindcss postcss autoprefixer -D
+npm install @alisyahidin/ui tailwindcss postcss autoprefixer -D
 ```
 or yarn:
 
 ```bash
-yarn add @edts/ui tailwindcss postcss autoprefixer --dev
+yarn add @alisyahidin/ui tailwindcss postcss autoprefixer --dev
 ```
 
 Initialize tailwindcss config with running:
@@ -23,12 +21,12 @@ Initialize tailwindcss config with running:
 npx tailwindcss init -p
 ```
 
-Import @edts/ui as tailwindcss plugin in `tailwind.config.js` file:
+Import @alisyahidin/ui as tailwindcss plugin in `tailwind.config.js` file:
 ```javascript
 module.exports = {
   //...
   plugins: [
-    require('@edts/ui')
+    require('@alisyahidin/ui')
   ]
 }
 ```
@@ -39,7 +37,7 @@ For more information about tailwindcss installation, please click [here](https:/
 Clone the project
 
 ```bash
-git clone https://bitbucket.org/edts/master-ui-tailwind.git
+git clone https://github.com/alisyahidin/tailwind-ui.git
 ```
 
 Go to the project directory

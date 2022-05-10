@@ -1,56 +1,68 @@
-.btn {
+.btn { /* main component class */
   @apply border-[1px] border-primary bg-primary text-white rounded m-1 px-4 py-2 text-h2;
-  &:hover {
-    @apply bg-primary-40;
-  }
+  /* component state */
   &:disabled {
     @apply bg-neutral-30 border-neutral-30 cursor-not-allowed text-white !important;
   }
-  &.btn-outline:not(:disabled):not(.btn-ghost) {
-    @apply text-primary;
+  &:hover {
+    @apply bg-primary-40;
+    &.btn-outline { /* component variant */
+      &:hover {
+        @apply text-white;
+      }
+    }
   }
 
-  &-primary {
+  &-primary { /* component color */
     @apply bg-primary border-primary text-white;
     &:hover {
       @apply bg-primary-40;
     }
-    &.btn-outline {
+    &.btn-outline { /* component variant */
       @apply text-primary !important;
+      &:hover {
+        @apply text-white !important;
+      }
     }
   }
 
-  &-secondary {
+  &-secondary { /* component color */
     @apply bg-secondary border-secondary text-white;
     &:hover {
       @apply bg-secondary-40;
     }
-    &.btn-outline {
+    &.btn-outline { /* component variant */
       @apply text-secondary !important;
+      &:hover {
+        @apply text-white !important;
+      }
     }
   }
 
-  &-ghost {
+  &-ghost { /* component color */
     @apply bg-transparent border-transparent text-black;
     &:hover {
-      @apply bg-gray-100;
+      @apply bg-gray-100 text-black !important;
     }
   }
 
-  &-success {
+  &-success { /* component color */
     @apply bg-green-500 border-green-500 text-white;
     &:hover {
       @apply bg-green-600;
     }
-    &.btn-outline {
+    &.btn-outline { /* component variant */
       @apply text-green-500 !important;
+      &:hover {
+        @apply text-white !important;
+      }
     }
   }
 
-  &-outline {
+  &-outline { /* component variant */
     @apply bg-transparent;
-    &:not(.btn-ghost):hover {
-      @apply text-white !important;
+    &:hover {
+      @apply text-white;
     }
   }
 }

@@ -1,7 +1,14 @@
 {
   "css.validate": false,
   "scss.validate": false,
+  "editor.trimAutoWhitespace": true,
   "files.associations": {
     "*.css": "scss"
-  }
+  },
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "styled\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
+  ]
 }

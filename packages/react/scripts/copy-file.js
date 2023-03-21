@@ -37,7 +37,7 @@ const createPackageFile = async () => {
   newPackageJson.dependencies = {
     ...newPackageJson.dependencies,
     "@alisyahidin/core": JSON.parse(await fse.readFile(path.resolve(packagePath, '../core/package.json'), 'utf8')).version,
-    "@alisyahidin/icon": JSON.parse(await fse.readFile(path.resolve(packagePath, '../icon/package.json'), 'utf8')).version,
+    // "@alisyahidin/icon": JSON.parse(await fse.readFile(path.resolve(packagePath, '../icon/package.json'), 'utf8')).version,
   }
   const targetPath = path.resolve(buildPath, './package.json')
 

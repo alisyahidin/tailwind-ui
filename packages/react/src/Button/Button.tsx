@@ -1,29 +1,17 @@
-import { FC, HTMLAttributes } from 'react'
-import tw from 'twin.macro'
+import { styled } from '@slicknode/stylemapper';
 
-type Variant = 'secondary' | 'primary' | 'ghost' | 'success'
+const Button = styled('button', 'btn', {
+    variants: {
+        variant: {
+            primary: 'btn-primary',
+            secondary: 'btn-secondary',
+            ghost: 'btn-ghost',
+            success: 'btn-success',
+        },
+        outline: {
+            true: 'btn-outline',
+        }
+    }
+});
 
-type Props = {
-    variant: Variant
-    outlined: boolean
-} & HTMLAttributes<HTMLButtonElement>
-
-const Button: FC<Props> = ({ children, variant = 'primary', outlined, ...props }) => (
-    <button
-        css={[
-            tw`btn btn-primary`,
-            variant === 'secondary' && tw`btn-secondary`,
-            variant === 'success' && tw`btn-success`,
-            variant === 'ghost' && tw`btn-ghost`,
-            outlined && tw`btn-outline`,
-            outlined && variant === 'primary' && tw`text-primary`,
-            outlined && variant === 'secondary' && tw`text-secondary`,
-            outlined && variant === 'success' && tw`text-green-500`,
-        ]}
-        {...props}
-    >
-        {children}
-    </button>
-)
-
-export default Button
+export default Button;

@@ -1,68 +1,50 @@
-.btn { /* main component class */
-  @apply border-[1px] border-primary bg-primary text-white rounded m-1 px-4 py-2 text-h2;
-  /* component state */
+.btn {
   &:disabled {
     @apply bg-neutral-30 border-neutral-30 cursor-not-allowed text-white !important;
   }
+
+  @apply border-[1px] border-gray-500 bg-gray-500 text-white rounded m-1 px-4 py-2 text-h2;
+  &-outline {
+    @apply bg-transparent text-gray-500;
+  }
   &:hover {
-    @apply bg-primary-40;
-    &.btn-outline { /* component variant */
-      &:hover {
-        @apply text-white;
-      }
-    }
+    @apply bg-gray-600 text-white;
   }
 
-  &-primary { /* component color */
+  &-primary {
     @apply bg-primary border-primary text-white;
-    &:hover {
-      @apply bg-primary-40;
+    &.btn-outline {
+      @apply bg-transparent text-primary;
     }
-    &.btn-outline { /* component variant */
-      @apply text-primary !important;
-      &:hover {
-        @apply text-white !important;
-      }
+    &:hover {
+      @apply bg-primary-40 text-white;
     }
   }
 
-  &-secondary { /* component color */
+  &-secondary {
     @apply bg-secondary border-secondary text-white;
-    &:hover {
-      @apply bg-secondary-40;
+    &.btn-outline {
+      @apply bg-transparent text-secondary;
     }
-    &.btn-outline { /* component variant */
-      @apply text-secondary !important;
-      &:hover {
-        @apply text-white !important;
-      }
+    &:hover {
+      @apply bg-secondary-40 text-white;
     }
   }
 
-  &-ghost { /* component color */
+  &-success {
+    @apply bg-green-500 border-green-500 text-white;
+    &.btn-outline {
+      @apply bg-transparent text-green-500;
+    }
+    &:hover {
+      @apply bg-green-600 text-white;
+    }
+  }
+
+  &-ghost {
     @apply bg-transparent border-transparent text-black;
     &:hover {
-      @apply bg-gray-100 text-black !important;
-    }
-  }
-
-  &-success { /* component color */
-    @apply bg-green-500 border-green-500 text-white;
-    &:hover {
-      @apply bg-green-600;
-    }
-    &.btn-outline { /* component variant */
-      @apply text-green-500 !important;
-      &:hover {
-        @apply text-white !important;
-      }
-    }
-  }
-
-  &-outline { /* component variant */
-    @apply bg-transparent;
-    &:hover {
-      @apply text-white;
+      @apply bg-gray-100 text-black;
     }
   }
 }

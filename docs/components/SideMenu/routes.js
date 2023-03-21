@@ -1,10 +1,17 @@
-export default [
+const routes = [
   {
     path: '/',
     title: 'Home',
   },
   {
-    path: '/components/button',
-    title: 'Button',
+    title: 'Components',
+    children: [
+      {
+        path: '/components/button',
+        title: 'Button',
+      },
+    ]
   },
-]
+];
+
+export default routes;

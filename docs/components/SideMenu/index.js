@@ -6,11 +6,11 @@ import routes from "./routes";
 const TabItemComponent = ({ title, path }) => {
   const { pathname } = useRouter()
   return (
-    <li className="mr-2 border-b">
+    <li className="ml-4 border-b">
       <Link 
         href={path}
         className={[
-          'flex text-gray-500 hover:text-gray-600 hover:bg-gray-50 py-4 px-4 text-sm font-medium text-center',
+          'flex text-gray-800 hover:text-gray-900 hover:bg-gray-50 p-3 text-sm font-medium text-center',
           pathname === path ? "text-primary active" : ""
         ].join('').trim()}
         >
@@ -22,7 +22,7 @@ const TabItemComponent = ({ title, path }) => {
 
 const SideMenu = () => {
   return (
-    <aside>
+    <aside className="border border-r-gray-500">
       {routes.map((route, index) => (
         <Fragment key={index}>
           {Boolean(route.path)

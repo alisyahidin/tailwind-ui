@@ -41,6 +41,19 @@ const ButtonList = () => {
           <button className="btn btn-outline btn-ghost">Ghost</button>
         </div>
       </div>
+      <h2 className="text-d1 mb-8">Custom Theme</h2>
+      <div className="flex flex-col mb-28 flex-wrap">
+        <div>
+          <Button data-theme="newtheme">Default</Button>
+          <Button data-theme="newtheme" variant="primary">Primary</Button>
+          <Button data-theme="newtheme" variant="secondary">Secondary</Button>
+        </div>
+        <div>
+          <button data-theme="newtheme" className="btn btn-outline">Default</button>
+          <button data-theme="newtheme" className="btn btn-outline btn-primary">Primary</button>
+          <button data-theme="newtheme" className="btn btn-outline btn-secondary">Secondary</button>
+        </div>
+      </div>
     </div>
   );
 };
